@@ -1,0 +1,152 @@
+/* TEAL THEME (mobile first) */
+
+:root {
+    --primary-color: #008080;
+    /* teal */
+    --secondary-color: #20b2aa;
+    /* light teal */
+    --accent-color: #b2dfdb;
+    /* soft teal */
+    --light: #f5f9f9;
+    --dark: #1f2d2d;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+header img {
+    width: 40px;
+}
+
+header span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+/* HAMBURGER */
+#menu {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* NAVIGATION */
+nav {
+    display: none;
+    background: var(--secondary-color);
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+nav a {
+    display: block;
+    padding: 0.8rem;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: var(--primary-color);
+}
+
+/* MAIN */
+main {
+    margin: 1rem 0;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+section {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* COURSE CARDS */
+.course-card {
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    background: white;
+}
+
+.completed {
+    background: var(--accent-color);
+    border-left: 5px solid var(--primary-color);
+    font-weight: bold;
+}
+
+/* FILTER BUTTONS */
+.filters {
+    margin-bottom: 1rem;
+}
+
+.filters button {
+    padding: 0.5rem 0.8rem;
+    margin: 0.3rem;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.filters button:hover {
+    background: var(--secondary-color);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
