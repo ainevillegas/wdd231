@@ -1,12 +1,7 @@
-/* TEAL THEME (mobile first) */
-
 :root {
     --primary-color: #008080;
-    /* teal */
     --secondary-color: #20b2aa;
-    /* light teal */
     --accent-color: #b2dfdb;
-    /* soft teal */
     --light: #f5f9f9;
     --dark: #1f2d2d;
 }
@@ -27,6 +22,13 @@ body {
     padding: 0 1rem;
 }
 
+/* ✅ FIX: replaces inline HTML style */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 /* HEADER */
 header {
     display: flex;
@@ -44,7 +46,6 @@ header img {
 header span {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-left: 0.5rem;
 }
 
 /* HAMBURGER */
@@ -76,9 +77,10 @@ nav a {
     padding: 0.8rem;
     color: white;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
 }
 
+/* ✅ IMPROVED: smoother hover */
 nav a:hover {
     background: var(--primary-color);
 }
@@ -93,6 +95,7 @@ h1 {
     color: var(--primary-color);
 }
 
+/* ✅ IMPROVED: prevents text touching edges */
 section {
     background: white;
     padding: 1rem;
@@ -129,7 +132,7 @@ section {
     color: white;
     cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
 }
 
 .filters button:hover {

@@ -3,20 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="WDD231 Home Page">
-    <meta name="author" content="Lolilaine Curro-Villegas">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="This is the WDD231 home page demonstrating responsive design, JavaScript interaction, and clean web development practices.">
+    <meta name="author" content="Lolilaine Curro-Villegas">
 
     <title>WDD231 Home</title>
 
-     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- JAVASCRIPT -->
+    <!-- JS -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
@@ -26,16 +32,15 @@
 
     <!-- HEADER -->
     <header>
-        <div style="display:flex; align-items:center;">
-            <img src="image/home.png" alt="Site Logo">
+        <div class="header-left">
+            <img src="images/home.png" alt="Site Logo">
             <span>Aine Villegas</span>
         </div>
 
-        <!-- HAMBURGER -->
         <div id="menu">&#9776;</div>
     </header>
 
-    <!-- NAVIGATION -->
+    <!-- NAV -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -49,25 +54,25 @@
         <div>
             <h1>Home</h1>
 
-            <!-- SECTION 1 -->
             <section>
                 <h2>About Me</h2>
-                <p>
-                    Welcome to my WDD231 homepage. This page demonstrates responsive design,
-                    JavaScript interactivity, and proper web structure.
-                </p>
+                <p>This is my WDD231 homepage demonstrating responsive design and JavaScript functionality.</p>
             </section>
 
-            <!-- SECTION 2 (COURSES) -->
             <section>
                 <h2>Course Certificate</h2>
 
-                <!-- FILTER        <!-- TOTAL CREDITS -->
+                <div class="filters">
+                    <button id="allBtn">All</button>
+                    <button id="wddBtn">WDD</button>
+                    <button id="cseBtn">CSE</button>
+                </div>
+
+                <div id="courses"></div>
                 <p id="totalCredits"></p>
             </section>
         </div>
 
-        <!-- SECTION 3 -->
         <section>
             <h2>Web Resources</h2>
             <ul>
@@ -81,19 +86,15 @@
     <!-- FOOTER -->
     <footer>
 
-        <!-- SOCIAL LINKS -->
         <div>
             <a href="https://github.com/yourusername" target="_blank">GitHub</a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-            <a href="#">Twitter</a>
         </div>
 
-        <!-- COPYRIGHT -->
         <p>
             &copy; <span id="year"></span> Aine Villegas. All rights reserved.
         </p>
 
-        <!-- LAST MODIFIED -->
         <p id="lastModified"></p>
 
     </footer>
