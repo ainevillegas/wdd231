@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chamber Directory | Singapore Central</title>
+
+    <!-- Meta -->
+    <meta name="description" content="Explore business members of the Singapore Central Chamber of Commerce.">
+    <meta name="author" content="Lolilaine Curro-Villegas">
+
+    <!-- ✅ Favicon-->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- ✅ Social Media Meta -->
+    <meta property="og:title" content="Singapore Chamber Directory">
+    <meta property="og:description" content="Discover local businesses and connect with members.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630">
+    <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ CSS  -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- ✅ JavaScript  -->
+    <script src="script/directory.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Singapore Central Chamber</h1>
+
+        <nav>
+            <button id="menuBtn">☰</button>
+
+            <ul id="navMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Member Directory</h2>
+
+        <!-- ✅ View Toggle -->
+        <div class="view-toggle">
+            <button id="gridView">Grid</button>
+            <button id="listView">List</button>
+        </div>
+
+        <!-- ✅ Members Display -->
+        <section id="members" class="grid"></section>
+    </main>
+
+    <footer>
+        <p><strong>Singapore Central Chamber</strong></p>
+        <p>Email: info@chamber.sg | Phone: +65 1234 5678</p>
+        <p>WDD 231 | Aine Villegas, Philippines </p>
+
+        <!-- ✅ JS script -->
+        <p>© <span id="year"></span></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

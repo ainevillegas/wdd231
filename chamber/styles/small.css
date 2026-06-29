@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f6fa;
+}
+
+header {
+    background: #0A3D62;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul.open {
+    display: block;
+}
+
+nav li {
+    margin: 10px 0;
+}
+
+#menuBtn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+}
+
+main {
+    padding: 1rem;
+}
+
+.view-toggle {
+    margin-bottom: 1rem;
+}
+
+#members.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+#members.list .card {
+    text-align: left;
+    display: block;
+}
+
+footer {
+    background: #0A3D62;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}

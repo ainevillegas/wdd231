@@ -1,0 +1,59 @@
+
+[
+  {
+    "name": "Bright Tech Solutions",
+    "address": "123 Tech Street",
+    "phone": "+65 9001 0001",
+    "website": "https://example.com",
+    "image": "https://via.placeholder.com/300",
+    "membership": 3
+  },
+  {
+    "name": "Green Market",
+    "address": "45 Eco Avenue",
+    "phone": "+65 9001 0002",
+    "website": "https://example.com",
+    "image": "https://via.placeholder.com/300",
+    "membership": 2
+  },
+  {
+    "name": "Urban Cafe",
+    "address": "89 City Plaza",
+    "phone": "+65 9001 0003",
+    "website": "https://example.com",
+    "image": "https://via.placeholder.com/300",
+    "membership": 1
+  },
+  {
+    "name": "Digital Marketing Pro",
+    "address": "77 Startup Lane",
+    "phone": "+65 9001 0004",
+    "website": "https://example.com",
+    "image": "https://via.placeholder.com/300",
+    "membership": 3
+  },
+  {
+    "name": "Fitness Zone",
+    "address": "12 Wellness St",
+    "phone": "+65 9001 0005",
+    "website": "https://example.com",
+    "image": "https://via.placeholder.com/300",
+    "membership": 2
+  },
+  {
+    "name": "Book Haven",
+    "address": "55 Reading Rd",
+    "phone": "+65 9001 0006",
+    "website": "https://example.com",
+    "image": "https://via.placeholder.com/300",
+    "membership": 1
+  },
+  {
+    "name": "Travel Experts SG",
+    "address": "88 Holiday Blvd",
+    "phone": "+65 9001 0007",
+    "website": "https://example.com",
+    "image": "https://via.placeholder.com/300",
+    "membership": 3
+  }
+]
