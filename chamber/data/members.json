@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Desert Tech Solutions",
+      "address": "101 Innovation Ave",
+      "phone": "+223-555-1001",
+      "website": "https://example.com",
+      "image": "desert-tech.jpg",
+      "level": "Gold"
+    },
+    {
+      "name": "Sahara Logistics",
+      "address": "202 Trade Road",
+      "phone": "+223-555-1002",
+      "website": "https://example.com",
+      "image": "sahara-logistics.jpg",
+      "level": "Silver"
+    },
+    {
+      "name": "Oasis Financial Group",
+      "address": "303 Business Blvd",
+      "phone": "+223-555-1003",
+      "website": "https://example.com",
+      "image": "oasis-finance.jpg",
+      "level": "Gold"
+    },
+    {
+      "name": "Timbuktu Boutique",
+      "address": "404 Market Street",
+      "phone": "+223-555-1004",
+      "website": "https://example.com",
+      "image": "timbuktu-boutique.jpg",
+      "level": "Member"
+    },
+    {
+      "name": "River Traders",
+      "address": "505 Commerce Drive",
+      "phone": "+223-555-1005",
+      "website": "https://example.com",
+      "image": "river-traders.jpg",
+      "level": "Silver"
+    },
+    {
+      "name": "Desert Marketing Agency",
+      "address": "606 Creative Way",
+      "phone": "+223-555-1006",
+      "website": "https://example.com",
+      "image": "desert-marketing.jpg",
+      "level": "Gold"
+    },
+    {
+      "name": "Heritage Tourism Services",
+      "address": "707 Cultural Lane",
+      "phone": "+223-555-1007",
+      "website": "https://example.com",
+      "image": "heritage-tourism.jpg",
+      "level": "Member"
+    }
+  ]
+}

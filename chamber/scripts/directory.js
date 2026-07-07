@@ -1,32 +1,44 @@
-
-const url = "data/members.json";
-
-const membersContainer = document.querySelector("#members");
+const membersContainer = document.querySelector("#membersContainer");
 
 async function getMembers() {
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMembers(data);
+    try {
+        const response = await fetch("data/members.json");
+
+        if (!response.ok) {
+            throw new Error("Failed to load members.json");
+        }
+
+        const data = await response.json();
+        displayMembers(data.members);
+
+    } catch (error) {
+        console.error("Error loading members:", error);
+    }
 }
 
 function displayMembers(members) {
     membersContainer.innerHTML = "";
 
     members.forEach(member => {
-        const card = document.createElement("section");
+        const card = document.createElement("article");
         card.classList.add("card");
 
         card.innerHTML = `
-            <img src="${member.image}" alt="${member.name} logo" loading="lazy">
-            <h2>${member.name}</h2>
+            <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+
+            <h3>${member.name}</h3>
+
             <p>${member.address}</p>
+
             <p>${member.phone}</p>
+
             <p>
-            <a href="${member.website}" target="_blank">
-            Visit Website
-            </a>
+                <a href="${member.website}" target="_blank" rel="noopener">
+                    Visit Website
+                </a>
             </p>
-            <p>Membership Level: ${member.membership}</p>
+
+            <p>Membership Level: ${member.level}</p>
         `;
 
         membersContainer.appendChild(card);
@@ -35,18 +47,12 @@ function displayMembers(members) {
 
 getMembers();
 
-document.querySelector("#gridView").addEventListener("click", () => {
-    membersContainer.classList.add("grid");
-    membersContainer.classList.remove("list");
+document.querySelector("#gridBtn").addEventListener("click", () => {
+    membersContainer.classList.add("grid-view");
+    membersContainer.classList.remove("list-view");
 });
 
-document.querySelector("#listView").addEventListener("click", () => {
-    membersContainer.classList.add("list");
-    membersContainer.classList.remove("grid");
+document.querySelector("#listBtn").addEventListener("click", () => {
+    membersContainer.classList.add("list-view");
+    membersContainer.classList.remove("grid-view");
 });
-
-document.querySelector("#year").textContent =
-    new Date().getFullYear();
-
-document.querySelector("#lastModified").textContent =
-    document.lastModified;

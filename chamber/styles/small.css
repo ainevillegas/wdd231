@@ -1,19 +1,50 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f6fa;
+:root {
+    --primary: #0B3C5D;
+    --secondary: #D9A441;
+    --light: #F5F5F5;
+    --dark: #222222;
 }
 
-header {
-    background: #0A3D62;
-    color: white;
-    padding: 10px;
-    text-align: center;
+* {
+    box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+/* Header */
+
+header {
+    background-color: var(--primary);
+    color: white;
+}
+
+.header-container {
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+#menuButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Navigation */
 
 nav ul {
     display: none;
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 
@@ -21,51 +52,93 @@ nav ul.open {
     display: block;
 }
 
-nav li {
-    margin: 10px 0;
-}
-
-#menuBtn {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
+nav a {
+    display: block;
+    padding: .75rem;
     color: white;
+    text-decoration: none;
 }
 
-main {
-    padding: 1rem;
+.active {
+    background-color: var(--secondary);
+    color: black;
 }
 
-.view-toggle {
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Buttons */
+
+.view-controls {
+    text-align: center;
     margin-bottom: 1rem;
 }
 
-#members.grid {
+.view-controls button {
+    padding: .75rem 1rem;
+    cursor: pointer;
+    margin: 0 .25rem;
+}
+
+/* Grid View */
+
+.grid-view {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    padding: 1rem;
 }
+
+/* Cards */
 
 .card {
     background: white;
+    border-radius: 10px;
     padding: 1rem;
-    border-radius: 8px;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
     width: 100%;
-    height: auto;
+    max-width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-#members.list .card {
-    text-align: left;
-    display: block;
+.card a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
 }
+
+.card a:hover {
+    color: var(--secondary);
+}
+
+/* List View */
+
+.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.list-view img {
+    display: none;
+}
+
+/* Footer */
 
 footer {
-    background: #0A3D62;
+    background-color: var(--primary);
     color: white;
     padding: 1rem;
-    text-align: center;
+    margin-top: 2rem;
 }

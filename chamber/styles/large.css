@@ -1,16 +1,26 @@
 @media (min-width: 768px) {
 
-    nav ul {
-        display: flex;
-        justify-content: center;
-    }
-
-    #menuBtn {
+    #menuButton {
         display: none;
     }
 
-    #members.grid {
-        grid-template-columns: repeat(3, 1fr);
+    nav ul {
+        display: flex;
+        gap: 1rem;
     }
 
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .grid-view {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
 }
