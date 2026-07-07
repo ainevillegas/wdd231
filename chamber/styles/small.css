@@ -1,45 +1,36 @@
-:root {
-    --primary: #0B3C5D;
-    --secondary: #D9A441;
-    --light: #F5F5F5;
-    --dark: #222222;
-}
-
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--light);
-    color: var(--dark);
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5;
+    color: #222222;
 }
 
-/* Header */
-
 header {
-    background-color: var(--primary);
-    color: white;
+    background-color: #0b3c5d;
+    color: #ffffff;
 }
 
 .header-container {
     padding: 1rem;
 }
 
-h1 {
-    margin: 0;
+.site-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
 }
 
 #menuButton {
     background: none;
     border: none;
-    color: white;
+    color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
 }
-
-/* Navigation */
 
 nav ul {
     display: none;
@@ -54,24 +45,20 @@ nav ul.open {
 
 nav a {
     display: block;
-    padding: .75rem;
-    color: white;
+    padding: 0.75rem;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .active {
-    background-color: var(--secondary);
-    color: black;
+    background-color: #d9a441;
+    color: #000000;
 }
-
-/* Hero */
 
 .hero {
     text-align: center;
     padding: 2rem;
 }
-
-/* Buttons */
 
 .view-controls {
     text-align: center;
@@ -79,12 +66,10 @@ nav a {
 }
 
 .view-controls button {
-    padding: .75rem 1rem;
+    padding: 0.75rem 1rem;
     cursor: pointer;
-    margin: 0 .25rem;
+    margin: 0 0.25rem;
 }
-
-/* Grid View */
 
 .grid-view {
     display: grid;
@@ -93,10 +78,8 @@ nav a {
     padding: 1rem;
 }
 
-/* Cards */
-
 .card {
-    background: white;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
@@ -113,15 +96,13 @@ nav a {
 
 .card a {
     text-decoration: none;
-    color: var(--primary);
-    font-weight: bold;
+    color: #0b3c5d;
+    font-weight: 700;
 }
 
 .card a:hover {
-    color: var(--secondary);
+    color: #d9a441;
 }
-
-/* List View */
 
 .list-view {
     display: flex;
@@ -134,11 +115,9 @@ nav a {
     display: none;
 }
 
-/* Footer */
-
 footer {
-    background-color: var(--primary);
-    color: white;
+    background-color: #0b3c5d;
+    color: #ffffff;
     padding: 1rem;
     margin-top: 2rem;
 }
