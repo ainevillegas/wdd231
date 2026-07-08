@@ -1,0 +1,173 @@
+:root {
+    --primary-color: #12355b;
+    --secondary-color: #f4a261;
+    --accent-color: #ffffff;
+    --background-color: #f8f9fa;
+    --text-color: #222222;
+    --card-color: #ffffff;
+    --border-color: #d9d9d9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.header-content p {
+    margin: 0.25rem 0 0;
+}
+
+#menu {
+    margin-left: auto;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✕";
+}
+
+.navigation {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #0b2545;
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background-color: var(--secondary-color);
+    color: #000000;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    background-color: rgba(18, 53, 91, 0.88);
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.hero-text h2 {
+    margin-top: 0;
+}
+
+.cta {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #000000;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+#forecast {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.forecast-card,
+.spotlight-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.spotlight-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.spotlight-card img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.spotlight-card a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1rem;
+}

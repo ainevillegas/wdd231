@@ -23,3 +23,40 @@
         justify-content: space-between;
     }
 }
+
+@media screen and (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigation li {
+        flex: 1 1 auto;
+        max-width: 180px;
+        text-align: center;
+    }
+
+    .home-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+
+    .spotlight-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-text {
+        left: 3rem;
+        bottom: 3rem;
+        padding: 1.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+}
