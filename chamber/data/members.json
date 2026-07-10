@@ -58,38 +58,3 @@
     }
   ]
 }
-
-[
-  {
-    "name": "Cebu Tech Solutions",
-    "address": "123 Business Avenue, Cebu City",
-    "phone": "+63 32 555 1010",
-    "website": "https://example.com",
-    "logo": "images/cebu-tech.webp",
-    "membershipLevel": "Gold"
-  },
-  {
-    "name": "Island Fresh Market",
-    "address": "45 Market Street, Cebu City",
-    "phone": "+63 32 555 2020",
-    "website": "https://example.com",
-    "logo": "images/island-fresh.webp",
-    "membershipLevel": "Silver"
-  },
-  {
-    "name": "Harbor View Hotel",
-    "address": "88 Seaside Road, Cebu City",
-    "phone": "+63 32 555 3030",
-    "website": "https://example.com",
-    "logo": "images/harbor-view.webp",
-    "membershipLevel": "Gold"
-  },
-  {
-    "name": "Metro Print Services",
-    "address": "19 Commerce Lane, Cebu City",
-    "phone": "+63 32 555 4040",
-    "website": "https://example.com",
-    "logo": "images/metro-print.webp",
-    "membershipLevel": "Bronze"
-  }
-]
