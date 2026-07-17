@@ -1,128 +1,265 @@
-
-const menuButton = document.querySelector("#menu");
-const navigation = document.querySelector(".navigation");
-
-if (menuButton && navigation) {
-    menuButton.addEventListener("click", () => {
-        menuButton.classList.toggle("open");
-        navigation.classList.toggle("open");
-    });
-}
-
-document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#lastModified").textContent = document.lastModified;
-
-// Weather API
 const apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
-const lat = 10.3157;
-const lon = 123.8854;
 
-const weatherUrl =
-    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+const latitude = 15.223;
+const longitude = 120.574;
+
+const currentWeatherElement =
+    document.querySelector("#currentWeather");
+
+const forecastElement =
+    document.querySelector("#forecast");
+
+const spotlightContainer =
+    document.querySelector("#spotlightContainer");
+
+const currentWeatherURL =
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
+
+const forecastURL =
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
 
 async function getWeather() {
     try {
-        const response = await fetch(weatherUrl);
+        const [currentResponse, forecastResponse] =
+            await Promise.all([
+                fetch(currentWeatherURL),
+                fetch(forecastURL)
+            ]);
 
-        if (!response.ok) {
-            throw new Error("Weather data unavailable.");
+        if (!currentResponse.ok || !forecastResponse.ok) {
+            throw new Error("Weather data could not be retrieved.");
         }
 
-        const data = await response.json();
-        displayWeather(data);
+        const currentData = await currentResponse.json();
+        const forecastData = await forecastResponse.json();
+
+        displayCurrentWeather(currentData);
+        displayForecast(forecastData);
 
     } catch (error) {
-        document.querySelector("#current-temp").textContent = "Unavailable";
-        document.querySelector("#weather-desc").textContent =
-            "Weather data could not be loaded.";
-        document.querySelector("#forecast").textContent = "";
+        console.error("Weather error:", error);
+
+        currentWeatherElement.innerHTML = `
+            <p>Weather information is currently unavailable.</p>
+        `;
+
+        forecastElement.innerHTML = `
+            <p>Forecast information is currently unavailable.</p>
+        `;
     }
 }
 
-function displayWeather(data) {
-    const current = data.list[0];
+function displayCurrentWeather(data) {
+    const temperature = Math.round(data.main.temp);
 
-    document.querySelector("#current-temp").textContent =
-        `${Math.round(current.main.temp)}°F`;
+    const description =
+        capitalizeWords(data.weather[0].description);
 
-    document.querySelector("#weather-desc").textContent =
-        current.weather[0].description;
+    const iconCode = data.weather[0].icon;
 
-    const forecastContainer = document.querySelector("#forecast");
-    forecastContainer.innerHTML = "";
+    const iconURL =
+        `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
+    currentWeatherElement.innerHTML = `
+        <div class="current-weather-details">
+            <p class="current-temperature">
+                Current conditions in Mabalacat:
+                <strong>${temperature}&deg;F</strong>
+            </p>
+
+            <p class="current-description">
+                ${description}
+            </p>
+        </div>
+
+        <img
+            src="${iconURL}"
+            alt="${description}"
+            width="65"
+            height="65">
+    `;
+}
+
+function displayForecast(data) {
     const dailyForecasts = data.list
-        .filter(item => item.dt_txt.includes("12:00:00"))
+        .filter((item) =>
+            item.dt_txt.includes("12:00:00")
+        )
         .slice(0, 3);
 
-    dailyForecasts.forEach(day => {
-        const date = new Date(day.dt_txt);
+    forecastElement.innerHTML = "";
 
-        const card = document.createElement("div");
-        card.classList.add("forecast-card");
+    dailyForecasts.forEach((forecast) => {
+        const date =
+            new Date(forecast.dt_txt.replace(" ", "T"));
 
-        card.innerHTML = `
-            <p><strong>${date.toLocaleDateString("en-US", {
-            weekday: "long"
-        })}</strong></p>
-            <p>${Math.round(day.main.temp)}°F</p>
-            <p>${day.weather[0].description}</p>
+        const dayName =
+            new Intl.DateTimeFormat("en-US", {
+                weekday: "long"
+            }).format(date);
+
+        const temperature =
+            Math.round(forecast.main.temp);
+
+        const description =
+            forecast.weather[0].description;
+
+        const iconCode =
+            forecast.weather[0].icon;
+
+        const iconURL =
+            `https://openweathermap.org/img/wn/${iconCode}.png`;
+
+        const forecastCard =
+            document.createElement("article");
+
+        forecastCard.classList.add("forecast-card");
+
+        forecastCard.innerHTML = `
+            <h4>${dayName}</h4>
+
+            <img
+                src="${iconURL}"
+                alt="${description}"
+                width="42"
+                height="42">
+
+            <p class="forecast-temperature">
+                ${temperature}&deg;F
+            </p>
+
+            <p>${description}</p>
         `;
 
-        forecastContainer.appendChild(card);
+        forecastElement.appendChild(forecastCard);
     });
 }
 
-// Spotlight Members
-async function getSpotlights() {
+function capitalizeWords(text) {
+    return text
+        .split(" ")
+        .map((word) =>
+            word.charAt(0).toUpperCase() +
+            word.slice(1)
+        )
+        .join(" ");
+}
+
+async function getSpotlightMembers() {
     try {
-        const response = await fetch("data/members.json");
+        const response =
+            await fetch("data/members.json");
 
         if (!response.ok) {
-            throw new Error("Member data unavailable.");
+            throw new Error("Member data could not be retrieved.");
         }
 
         const data = await response.json();
-        displaySpotlights(data.members);
+
+        const members =
+            Array.isArray(data)
+                ? data
+                : data.members;
+
+        if (!Array.isArray(members)) {
+            throw new Error("Invalid members JSON structure.");
+        }
+
+        const qualifiedMembers =
+            members.filter((member) => {
+                const level =
+                    Number(member.membershipLevel);
+
+                return level === 2 || level === 3;
+            });
+
+        const selectedMembers =
+            shuffleArray(qualifiedMembers).slice(0, 3);
+
+        displaySpotlights(selectedMembers);
 
     } catch (error) {
-        document.querySelector("#spotlights").textContent =
-            "Spotlight members could not be loaded.";
+        console.error("Spotlight error:", error);
+
+        spotlightContainer.innerHTML = `
+            <p>
+                Member spotlight information is currently unavailable.
+            </p>
+        `;
     }
 }
 
+function shuffleArray(array) {
+    const shuffled = [...array];
+
+    for (
+        let index = shuffled.length - 1;
+        index > 0;
+        index--
+    ) {
+        const randomIndex =
+            Math.floor(Math.random() * (index + 1));
+
+        [
+            shuffled[index],
+            shuffled[randomIndex]
+        ] = [
+                shuffled[randomIndex],
+                shuffled[index]
+            ];
+    }
+
+    return shuffled;
+}
+
 function displaySpotlights(members) {
-    const spotlightContainer = document.querySelector("#spotlights");
     spotlightContainer.innerHTML = "";
 
-    const qualifiedMembers = members.filter(member =>
-        member.level.toLowerCase() === "gold" ||
-        member.level.toLowerCase() === "silver"
-    );
+    members.forEach((member) => {
+        const membershipLabel =
+            Number(member.membershipLevel) === 3
+                ? "Gold"
+                : "Silver";
 
-    const shuffledMembers = [...qualifiedMembers].sort(
-        () => Math.random() - 0.5
-    );
+        const card =
+            document.createElement("article");
 
-    const selectedMembers = shuffledMembers.slice(0, 3);
-
-    selectedMembers.forEach(member => {
-        const card = document.createElement("section");
         card.classList.add("spotlight-card");
 
         card.innerHTML = `
-            images/${member.image}
+            <div class="spotlight-card-header">
+                <img
+                    src="images/${member.image}"
+                    alt="${member.name} logo"
+                    width="76"
+                    height="76"
+                    loading="lazy">
+
+                <p class="membership">
+                    ${membershipLabel} Member
+                </p>
+            </div>
 
             <h3>${member.name}</h3>
 
-            <p><strong>Phone:</strong> ${member.phone}</p>
-
-            <p><strong>Address:</strong> ${member.address}</p>
-
-            <p><strong>Membership:</strong> ${member.level}</p>
+            <p>
+                <strong>ADDRESS:</strong>
+                ${member.address}
+            </p>
 
             <p>
-                ${member.website}
+                <strong>PHONE:</strong>
+                ${member.phone}
+            </p>
+
+            <p>
+                <strong>URL:</strong>
+
+                <a href="${member.website}"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Visit Website
+                </a>
             </p>
         `;
 
@@ -131,4 +268,4 @@ function displaySpotlights(members) {
 }
 
 getWeather();
-getSpotlights();
+getSpotlightMembers();
