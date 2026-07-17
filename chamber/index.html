@@ -8,7 +8,7 @@
     <title>Mabalacat Chamber of Commerce | Home</title>
 
     <meta name="description"
-        content="The Mabalacat Chamber of Commerce supports local businesses, promotes economic growth, and strengthens the community through collaboration and networking opportunities.">
+        content="Discover Mabalacat businesses, community events, weather updates, and Chamber membership opportunities.">
 
     <meta name="author" content="Lolilaine Curro-Villegas">
 
@@ -45,7 +45,7 @@
         <div class="header-container">
 
             <a href="index.html" class="logo-title">
-                <img src="images/mabalacatlogo.png" alt="Mabalacat Chamber of Commerce Logo" class="logo" width="65"
+                <img src="images/mabalacatlogo.png" alt="Mabalacat Chamber of Commerce logo" class="logo" width="65"
                     height="65">
 
                 <span class="site-title">
@@ -53,15 +53,17 @@
                 </span>
             </a>
 
-            <button id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            <button id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="navMenu">
                 ☰
             </button>
 
             <nav aria-label="Main navigation">
                 <ul id="navMenu">
-
                     <li>
-                        <a href="index.html" class="active">Home</a>
+                        <a href="index.html" class="active" aria-current="page">
+                            Home
+                        </a>
                     </li>
 
                     <li>
@@ -75,7 +77,6 @@
                     <li>
                         <a href="discover.html">Discover</a>
                     </li>
-
                 </ul>
             </nav>
 
@@ -94,7 +95,6 @@
             </picture>
 
             <div class="hero-content">
-
                 <h1>Mabalacat Chamber of Commerce</h1>
 
                 <p>
@@ -105,7 +105,6 @@
                 <a href="join.html" class="cta-button">
                     Join the Chamber
                 </a>
-
             </div>
 
         </section>
@@ -115,92 +114,87 @@
 
             <!-- Current Events -->
             <section class="card events-card">
-
                 <h2>Current Events</h2>
 
                 <article class="event">
-
                     <h3>Mabalacat Business Day Parade</h3>
 
-                    <p>
-                        <strong>Monday, August 10 at 10:00 AM</strong>
+                    <p class="event-date">
+                        Monday, August 10 at 10:00 AM
                     </p>
 
-                    <p>📍 Mabalacat City Hall Grounds</p>
-
-                    <p>
-                        Join us for a community celebration recognizing local
-                        businesses and entrepreneurs.
+                    <p class="event-location">
+                        Mabalacat City Hall Grounds
                     </p>
 
+                    <p>
+                        Join us for a community celebration recognizing
+                        local businesses and entrepreneurs.
+                    </p>
                 </article>
 
                 <hr>
 
                 <article class="event">
-
                     <h3>Chamber Business Mixer</h3>
 
-                    <p>
-                        <strong>Friday, August 14 at 6:00 PM</strong>
+                    <p class="event-date">
+                        Friday, August 14 at 6:00 PM
                     </p>
 
-                    <p>📍 Clark Freeport Business Center</p>
+                    <p class="event-location">
+                        Clark Freeport Business Center
+                    </p>
 
                     <p>
                         Network with fellow business owners over light
                         refreshments and local presentations.
                     </p>
-
                 </article>
 
                 <hr>
 
                 <article class="event">
-
                     <h3>Local Farmers Market Kickoff</h3>
 
-                    <p>
-                        <strong>Saturday, August 22 at 8:00 AM</strong>
+                    <p class="event-date">
+                        Saturday, August 22 at 8:00 AM
                     </p>
 
-                    <p>📍 Dau Community Park</p>
+                    <p class="event-location">
+                        Dau Community Park
+                    </p>
 
                     <p>
                         Support local farmers, food producers, and
                         small-business vendors.
                     </p>
-
                 </article>
-
             </section>
 
             <!-- Current Weather -->
             <section class="card weather-card">
-
                 <h2>Current Weather</h2>
 
-                <div id="weather">
+                <div id="weather" aria-live="polite">
                     <p>Loading weather data...</p>
                 </div>
 
                 <h3>Three-Day Forecast</h3>
 
-                <div id="forecast">
+                <div id="forecast" aria-live="polite">
                     <p>Loading forecast...</p>
                 </div>
-
             </section>
 
         </section>
 
         <!-- Member Spotlights -->
         <section class="card spotlight-section">
-
             <h2>Member Spotlights</h2>
 
-            <div id="spotlights" class="spotlight-grid"></div>
-
+            <div id="spotlights" class="spotlight-grid" aria-live="polite">
+            </div>
         </section>
 
     </main>
@@ -209,7 +203,6 @@
         <div class="footer-content">
 
             <div class="footer-contact">
-
                 <h2>Mabalacat Chamber of Commerce</h2>
 
                 <p>Mabalacat City, Pampanga</p>
@@ -225,45 +218,36 @@
                         (045) 000-0000
                     </a>
                 </p>
-
             </div>
 
             <div class="social-links" aria-label="Social media links">
 
                 <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
                     aria-label="Visit our YouTube page">
-
                     <img src="images/youtube.png" alt="" width="44" height="44">
                 </a>
 
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
                     aria-label="Visit our Instagram page">
-
                     <img src="images/instagram.png" alt="" width="44" height="44">
                 </a>
 
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
                     aria-label="Visit our Facebook page">
-
                     <img src="images/facebook.png" alt="" width="44" height="44">
                 </a>
 
                 <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"
                     aria-label="Visit our TikTok page">
-
                     <img src="images/tiktok.png" alt="" width="44" height="44">
                 </a>
 
             </div>
 
             <div class="footer-project">
-
                 <p>Aine Curro-Villegas</p>
-
                 <p>WDD 231 Chamber Project</p>
-
                 <p id="lastModified"></p>
-
             </div>
 
         </div>

@@ -51,12 +51,6 @@
         text-align: left;
     }
 
-    #navMenu a:hover,
-    #navMenu a.active {
-        background-color: var(--secondary-color);
-        color: #000000;
-    }
-
     /* ---------- MAIN ---------- */
 
     main {
@@ -73,7 +67,6 @@
         right: auto;
         bottom: 2rem;
         left: 2rem;
-        max-width: 500px;
         padding: 1.5rem;
     }
 
@@ -81,30 +74,24 @@
         font-size: 2rem;
     }
 
-    /* ---------- HOME GRID ---------- */
+    /* ---------- EVENTS AND WEATHER ---------- */
 
-   .home-grid {
-       display: grid;
-       grid-template-columns: 2fr 1fr;
-       gap: 1rem;
-       align-items: start;
-   }
-
-   .home-grid>.card:first-child {
-       grid-column: 1;
-   }
-
-   .home-grid>.weather-card {
-       grid-column: 2;
-   }
-
-    /* ---------- WEATHER FORECAST ---------- */
-
-    #forecast {
-        grid-template-columns: repeat(3, 1fr);
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+        align-items: stretch;
     }
 
-    /* ---------- SPOTLIGHTS ---------- */
+    .home-grid>.card {
+        height: 100%;
+    }
+
+    /* ---------- FORECAST ---------- */
+
+    #forecast {
+        grid-template-columns: 1fr;
+    }
+
+    /* ---------- MEMBER SPOTLIGHTS ---------- */
 
     .spotlight-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -118,20 +105,18 @@
 
     /* ---------- FOOTER ---------- */
 
-/* ---------- FOOTER ---------- */
-
     .footer-content {
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-}
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+    }
 
     .social-links {
-    justify-content: center;
-}
+        justify-content: center;
+    }
 
     .footer-project {
-    text-align: right;
-}
+        text-align: right;
+    }
 }
 
 /* ==========================================
@@ -162,5 +147,13 @@
 
     .grid-view {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    #forecast {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .forecast-card {
+        padding: 0.5rem;
     }
 }

@@ -8,6 +8,11 @@
     --text-color: #333333;
     --white: #ffffff;
     --border-color: #dce7e9;
+    --error-color: #8b0000;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --overlay-color: rgba(0, 75, 82, 0.92);
+    --nav-border-color: rgba(255, 255, 255, 0.15);
+    --social-hover-color: rgba(255, 255, 255, 0.15);
 }
 
 /* ---------- RESET ---------- */
@@ -33,6 +38,7 @@ body {
 /* ---------- GENERAL ELEMENTS ---------- */
 
 img {
+    display: block;
     max-width: 100%;
 }
 
@@ -101,12 +107,21 @@ header {
 
 #menuButton {
     display: block;
-    background: none;
+    padding: 0.25rem;
     border: none;
+    background: none;
     color: var(--white);
     font-size: 2rem;
     line-height: 1;
     cursor: pointer;
+}
+
+#menuButton:focus-visible,
+#navMenu a:focus-visible,
+.cta-button:focus-visible,
+.social-links a:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 3px;
 }
 
 nav {
@@ -131,13 +146,11 @@ nav {
 #navMenu a {
     display: block;
     padding: 1rem;
+    border-top: 1px solid var(--nav-border-color);
     color: var(--white);
     text-align: center;
     text-decoration: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    transition:
-        background-color 0.3s,
-        color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #navMenu a:hover,
@@ -166,7 +179,6 @@ main {
 
 .hero picture,
 .hero picture img {
-    display: block;
     width: 100%;
 }
 
@@ -180,9 +192,10 @@ main {
     right: 1rem;
     bottom: 1rem;
     left: 1rem;
+    max-width: 550px;
     padding: 1rem;
     border-radius: 8px;
-    background-color: rgba(0, 75, 82, 0.92);
+    background-color: var(--overlay-color);
     color: var(--white);
 }
 
@@ -207,9 +220,7 @@ main {
     color: var(--primary-color);
     font-weight: 700;
     text-decoration: none;
-    transition:
-        background-color 0.3s,
-        color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .cta-button:hover {
@@ -226,7 +237,7 @@ main {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     background-color: var(--white);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px var(--shadow-color);
 }
 
 .card h2 {
@@ -242,6 +253,12 @@ main {
     margin-bottom: 0.5rem;
 }
 
+.card hr {
+    margin: 1rem 0;
+    border: none;
+    border-top: 1px solid var(--border-color);
+}
+
 /* ---------- HOME GRID ---------- */
 
 .home-grid {
@@ -250,27 +267,89 @@ main {
     gap: 1rem;
 }
 
-/* Prevent doubled spacing inside the grid */
-
-.home-grid .card {
+.home-grid>.card {
     margin-bottom: 0;
 }
 
-/* ---------- WEATHER ---------- */
+/* ---------- EVENTS ---------- */
+
+.event {
+    margin-bottom: 1rem;
+}
+
+.event:last-child {
+    margin-bottom: 0;
+}
+
+.event h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.event p {
+    margin-bottom: 0.35rem;
+}
+
+.event-date {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.event-location {
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.event-location::before {
+    position: absolute;
+    left: 0;
+    content: "●";
+    color: var(--primary-color);
+    font-size: 0.75rem;
+}
+
+/* ---------- CURRENT WEATHER ---------- */
 
 #weather {
     padding-top: 0.5rem;
 }
 
-#weather p {
-    margin-bottom: 0.5rem;
+.current-weather {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
 }
 
-#weather img {
+.weather-symbol {
     width: 75px;
-    height: 75px;
-    object-fit: contain;
+    flex-shrink: 0;
+    font-size: 3.5rem;
+    line-height: 1;
+    text-align: center;
 }
+
+.weather-details {
+    flex: 1;
+}
+
+.weather-details p {
+    margin-bottom: 0.25rem;
+}
+
+.current-temperature {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.weather-error {
+    color: var(--error-color);
+}
+
+/* ---------- FORECAST ---------- */
 
 #forecast {
     display: grid;
@@ -284,18 +363,47 @@ main {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     background-color: var(--accent-color);
+    text-align: center;
 }
 
 .forecast-card h4 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: var(--primary-color);
+}
+
+.forecast-card p {
+    margin-bottom: 0.25rem;
+}
+
+.forecast-symbol {
+    margin: 0.25rem 0;
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+.forecast-temperature {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 /* ---------- MEMBER SPOTLIGHTS ---------- */
+
+.spotlight-section {
+    margin-top: 1rem;
+}
 
 .spotlight-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+}
+
+.spotlight-grid:empty::after {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    content: "Loading member spotlights...";
 }
 
 .spotlight-card {
@@ -307,7 +415,6 @@ main {
 }
 
 .spotlight-card img {
-    display: block;
     width: 100px;
     height: 100px;
     margin: 0 auto 1rem;
@@ -315,11 +422,23 @@ main {
 }
 
 .spotlight-card h3 {
+    margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
 .spotlight-card a {
     font-weight: 700;
+}
+
+.membership-level {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.data-error {
+    grid-column: 1 / -1;
+    padding: 1rem;
+    text-align: center;
 }
 
 /* ---------- DIRECTORY ---------- */
@@ -354,7 +473,6 @@ main {
 }
 
 .grid-view img {
-    display: block;
     max-width: 120px;
     margin: 0 auto 1rem;
 }
@@ -392,32 +510,6 @@ footer {
     margin-bottom: 0.25rem;
 }
 
-/* ---------- MEMBER SPOTLIGHT DETAILS ---------- */
-
-.spotlight-section {
-    margin-top: 1rem;
-}
-
-.spotlight-grid:empty::after {
-    content: "Loading member spotlights...";
-    display: block;
-    padding: 1rem;
-    text-align: center;
-}
-
-.membership-level {
-    color: var(--primary-color);
-    font-weight: 700;
-}
-
-.data-error {
-    grid-column: 1 / -1;
-    padding: 1rem;
-    text-align: center;
-}
-
-/* ---------- FOOTER LINKS ---------- */
-
 .footer-content a {
     color: var(--white);
     text-decoration: none;
@@ -443,152 +535,17 @@ footer {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    transition:
-        transform 0.2s,
-        background-color 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 .social-links a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
+    background-color: var(--social-hover-color);
     text-decoration: none;
+    transform: translateY(-2px);
 }
 
 .social-links img {
-    display: block;
     width: 40px;
     height: 40px;
     object-fit: contain;
-}
-
-/* ---------- CURRENT WEATHER ---------- */
-
-.current-weather {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.current-weather img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-.weather-details {
-    flex: 1;
-}
-
-.weather-details p {
-    margin-bottom: 0.25rem;
-}
-
-.current-temperature {
-    color: var(--primary-color);
-    font-size: 1.75rem;
-    font-weight: 700;
-}
-
-.weather-error {
-    color: #8b0000;
-}
-
-/* ---------- CURRENT WEATHER ---------- */
-
-.current-weather {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
-}
-
-.weather-symbol {
-    width: 75px;
-    flex-shrink: 0;
-    font-size: 3.5rem;
-    line-height: 1;
-    text-align: center;
-}
-
-.weather-details {
-    flex: 1;
-}
-
-.weather-details p {
-    margin-bottom: 0.25rem;
-}
-
-.current-temperature {
-    color: var(--primary-color);
-    font-size: 1.75rem;
-    font-weight: 700;
-}
-
-/* ---------- FORECAST ---------- */
-
-#forecast {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-
-.forecast-card {
-    padding: 0.75rem;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background-color: var(--accent-color);
-    text-align: center;
-}
-
-.forecast-card h4 {
-    margin-bottom: 0.25rem;
-    color: var(--primary-color);
-}
-
-.forecast-symbol {
-    margin: 0.25rem 0;
-    font-size: 2.25rem;
-    line-height: 1;
-}
-
-.forecast-temperature {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.forecast-card p {
-    margin-bottom: 0.25rem;
-}
-
-.weather-error {
-    color: #8b0000;
-}
-
-/* ---------- EVENTS ---------- */
-
-.event {
-    margin-bottom: 1rem;
-}
-
-.event h3 {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    margin-bottom: .4rem;
-}
-
-.event p {
-    margin-bottom: .35rem;
-}
-
-.event strong {
-    color: #444;
-}
-
-.card hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 1rem 0;
 }
