@@ -1,24 +1,25 @@
 const menuButton = document.querySelector("#menuButton");
 const navMenu = document.querySelector("#navMenu");
 
-if (menuButton && navMenu) {
-    menuButton.addEventListener("click", () => {
-        navMenu.classList.toggle("open");
+menuButton.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
 
-        const isOpen = navMenu.classList.contains("open");
+    const isOpen = navMenu.classList.contains("open");
 
-        menuButton.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
+    menuButton.setAttribute("aria-expanded", isOpen);
+    menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
 
-        menuButton.setAttribute(
-            "aria-label",
-            isOpen
-                ? "Close navigation menu"
-                : "Open navigation menu"
-        );
+    menuButton.textContent = isOpen ? "✕" : "☰";
+});
 
-        menuButton.textContent = isOpen ? "✕" : "☰";
-    });
-}
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+        navMenu.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation menu");
+        menuButton.textContent = "☰";
+    }
+});

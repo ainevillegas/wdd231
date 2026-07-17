@@ -1,62 +1,160 @@
+/* ==========================================
+   TABLET AND DESKTOP VIEW
+   ========================================== */
+
 @media screen and (min-width: 768px) {
+
+    /* ---------- HEADER ---------- */
+
+    .header-container {
+        min-height: 85px;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .site-title {
+        max-width: none;
+        font-size: 1.2rem;
+    }
+
+    /* ---------- DESKTOP NAVIGATION ---------- */
+
     #menuButton {
         display: none;
     }
 
-    nav ul {
-        display: flex;
-        gap: 1rem;
+    nav {
+        position: static;
+        width: auto;
     }
 
-    .header-container {
+    #navMenu,
+    #navMenu.open {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        width: auto;
+        background-color: transparent;
     }
 
-    .grid-view {
-        grid-template-columns: repeat(4, 1fr);
+    #navMenu li {
+        display: block;
     }
 
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    #menu {
-        display: none;
+    #navMenu a {
+        padding: 0.75rem 1rem;
+        border: none;
+        border-radius: 5px;
+        text-align: left;
     }
 
-    .navigation {
-        display: flex;
-        justify-content: center;
+    #navMenu a:hover,
+    #navMenu a.active {
+        background-color: var(--secondary-color);
+        color: #000000;
     }
 
-    .navigation li {
-        flex: 1 1 auto;
-        max-width: 180px;
-        text-align: center;
+    /* ---------- MAIN ---------- */
+
+    main {
+        padding: 1.5rem;
     }
+
+    /* ---------- HERO ---------- */
+
+    .hero picture img {
+        height: 450px;
+    }
+
+    .hero-content {
+        right: auto;
+        bottom: 2rem;
+        left: 2rem;
+        max-width: 500px;
+        padding: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    /* ---------- HOME GRID ---------- */
 
     .home-grid {
-        display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .home-grid .card {
+        height: 100%;
+    }
+
+    /* ---------- WEATHER FORECAST ---------- */
+
+    #forecast {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ---------- SPOTLIGHTS ---------- */
+
+    .spotlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ---------- DIRECTORY ---------- */
+
+    .grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ---------- FOOTER ---------- */
+
+/* ---------- FOOTER ---------- */
+
+    .footer-content {
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+    .social-links {
+    justify-content: center;
+}
+
+    .footer-project {
+    text-align: right;
+}
+}
+
+/* ==========================================
+   LARGE DESKTOP VIEW
+   ========================================== */
+
+@media screen and (min-width: 1024px) {
+
+    .site-title {
+        font-size: 1.35rem;
+    }
+
+    .hero picture img {
+        height: 500px;
+    }
+
+    .hero-content {
+        max-width: 550px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.25rem;
     }
 
     .spotlight-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .hero-text {
-        left: 3rem;
-        bottom: 3rem;
-        padding: 1.5rem;
-    }
-
-    .hero-text h2 {
-        font-size: 2rem;
+    .grid-view {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

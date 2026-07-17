@@ -1,100 +1,100 @@
 {
-  "members": [
-    {
-      "name": "Clark Digital Services",
-      "address": "Clark Freeport Zone, Pampanga",
-      "phone": "+63 45 555 1001",
-      "website": "https://example.com/clark-digital-services",
-      "image": "clarkdigital.png",
-      "membershipLevel": 3
-    },
-    {
-      "name": "Pampanga Business Solutions",
-      "address": "Mabalacat City, Pampanga",
-      "phone": "+63 45 555 1002",
-      "website": "https://example.com/pampanga-business-solutions",
-      "image": "pampangabusiness.png",
-      "membershipLevel": 3
-    },
-    {
-      "name": "Mabalacat Food Enterprises",
-      "address": "Dau, Mabalacat City, Pampanga",
-      "phone": "+63 45 555 1003",
-      "website": "https://example.com/mabalacat-food-enterprises",
-      "image": "mabalacatenterprise.png",
-      "membershipLevel": 3
-    },
-    {
-      "name": "North Pampanga Printing",
-      "address": "Mabalacat City, Pampanga",
-      "phone": "+63 45 555 1004",
-      "website": "https://example.com/north-pampanga-printing",
-      "image": "npp.png",
-      "membershipLevel": 2
-    },
-    {
-      "name": "Community Volunteer Group",
-      "address": "Mabalacat City, Pampanga",
-      "phone": "+63 45 555 1005",
-      "website": "https://example.com/community-volunteer-group",
-      "image": "volunteergroup.png",
-      "membershipLevel": 1
-    },
-    {
-      "name": "Desert Marketing Solutions",
-      "address": "Clark Freeport Zone, Pampanga",
-      "phone": "+63 45 555 1006",
-      "website": "https://example.com/desert-marketing",
-      "image": "desert-marketing.jpg",
-      "membershipLevel": 2
-    },
-    {
-      "name": "Desert Technology Services",
-      "address": "Mabalacat City, Pampanga",
-      "phone": "+63 45 555 1007",
-      "website": "https://example.com/desert-technology",
-      "image": "desert-tech.jpg",
-      "membershipLevel": 3
-    },
-    {
-      "name": "Heritage Tourism Services",
-      "address": "Mabalacat City, Pampanga",
-      "phone": "+63 45 555 1008",
-      "website": "https://example.com/heritage-tourism",
-      "image": "heritage-tourism.jpg",
-      "membershipLevel": 2
-    },
-    {
-      "name": "Oasis Financial Services",
-      "address": "Clark Freeport Zone, Pampanga",
-      "phone": "+63 45 555 1009",
-      "website": "https://example.com/oasis-finance",
-      "image": "oasis-finance.jpg",
-      "membershipLevel": 3
-    },
-    {
-      "name": "River Traders",
-      "address": "Dau, Mabalacat City, Pampanga",
-      "phone": "+63 45 555 1010",
-      "website": "https://example.com/river-traders",
-      "image": "river-traders.jpg",
-      "membershipLevel": 2
-    },
-    {
-      "name": "Sahara Logistics",
-      "address": "Clark Freeport Zone, Pampanga",
-      "phone": "+63 45 555 1011",
-      "website": "https://example.com/sahara-logistics",
-      "image": "sahara-logistics.jpg",
-      "membershipLevel": 3
-    },
-    {
-      "name": "Timbuktu Boutique",
-      "address": "Mabalacat City, Pampanga",
-      "phone": "+63 45 555 1012",
-      "website": "https://example.com/timbuktu-boutique",
-      "image": "timbuktu-boutique.jpg",
-      "membershipLevel": 1
-    }
-  ]
+    "members": [
+        {
+            "name": "Clark Digital Services",
+            "address": "Clark Freeport Zone, Pampanga",
+            "phone": "+63 45 555 1001",
+            "website": "https://example.com/clark-digital-services",
+            "image": "clarkdigital.png",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Pampanga Business Solutions",
+            "address": "Mabalacat City, Pampanga",
+            "phone": "+63 45 555 1002",
+            "website": "https://example.com/pampanga-business-solutions",
+            "image": "mabalacatbusiness.png",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Mabalacat Food Enterprises",
+            "address": "Dau, Mabalacat City, Pampanga",
+            "phone": "+63 45 555 1003",
+            "website": "https://example.com/mabalacat-food-enterprises",
+            "image": "mabalacatenterprise.png",
+            "membershipLevel": 3
+        },
+        {
+            "name": "North Pampanga Printing",
+            "address": "Mabalacat City, Pampanga",
+            "phone": "+63 45 555 1004",
+            "website": "https://example.com/north-pampanga-printing",
+            "image": "npp.png",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Community Volunteer Group",
+            "address": "Mabalacat City, Pampanga",
+            "phone": "+63 45 555 1005",
+            "website": "https://example.com/community-volunteer-group",
+            "image": "mabalacatvolunteergroup.png",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Desert Marketing Solutions",
+            "address": "Clark Freeport Zone, Pampanga",
+            "phone": "+63 45 555 1006",
+            "website": "https://example.com/desert-marketing",
+            "image": "desert-marketing.jpg",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Desert Technology Services",
+            "address": "Mabalacat City, Pampanga",
+            "phone": "+63 45 555 1007",
+            "website": "https://example.com/desert-technology",
+            "image": "desert-tech.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Heritage Tourism Services",
+            "address": "Mabalacat City, Pampanga",
+            "phone": "+63 45 555 1008",
+            "website": "https://example.com/heritage-tourism",
+            "image": "heritage-tourism.jpg",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Oasis Financial Services",
+            "address": "Clark Freeport Zone, Pampanga",
+            "phone": "+63 45 555 1009",
+            "website": "https://example.com/oasis-finance",
+            "image": "oasis-finance.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "River Traders",
+            "address": "Dau, Mabalacat City, Pampanga",
+            "phone": "+63 45 555 1010",
+            "website": "https://example.com/river-traders",
+            "image": "river-traders.jpg",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Sahara Logistics",
+            "address": "Clark Freeport Zone, Pampanga",
+            "phone": "+63 45 555 1011",
+            "website": "https://example.com/sahara-logistics",
+            "image": "sahara-logistics.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Timbuktu Boutique",
+            "address": "Mabalacat City, Pampanga",
+            "phone": "+63 45 555 1012",
+            "website": "https://example.com/timbuktu-boutique",
+            "image": "timbuktu-boutique.jpg",
+            "membershipLevel": 1
+        }
+    ]
 }
