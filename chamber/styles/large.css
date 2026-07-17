@@ -27,7 +27,7 @@
         display: none;
     }
 
-    nav {
+    header nav {
         position: static;
         width: auto;
     }

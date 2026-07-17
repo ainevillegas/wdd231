@@ -116,15 +116,7 @@ header {
     cursor: pointer;
 }
 
-#menuButton:focus-visible,
-#navMenu a:focus-visible,
-.cta-button:focus-visible,
-.social-links a:focus-visible {
-    outline: 3px solid var(--secondary-color);
-    outline-offset: 3px;
-}
-
-nav {
+header nav {
     position: absolute;
     top: 100%;
     left: 0;
@@ -157,6 +149,16 @@ nav {
 #navMenu a.active {
     background-color: var(--secondary-color);
     color: #000000;
+}
+
+/* ---------- KEYBOARD FOCUS ---------- */
+
+#menuButton:focus-visible,
+#navMenu a:focus-visible,
+.cta-button:focus-visible,
+.social-links a:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 3px;
 }
 
 /* ---------- MAIN ---------- */
@@ -305,9 +307,9 @@ main {
 .event-location::before {
     position: absolute;
     left: 0;
-    content: "●";
     color: var(--primary-color);
     font-size: 0.75rem;
+    content: "●";
 }
 
 /* ---------- CURRENT WEATHER ---------- */
@@ -522,9 +524,11 @@ footer {
 /* ---------- SOCIAL MEDIA ---------- */
 
 .social-links {
+    position: static;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: auto;
     gap: 0.75rem;
 }
 
