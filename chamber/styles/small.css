@@ -566,3 +566,29 @@ footer {
 .weather-error {
     color: #8b0000;
 }
+
+/* ---------- EVENTS ---------- */
+
+.event {
+    margin-bottom: 1rem;
+}
+
+.event h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: .4rem;
+}
+
+.event p {
+    margin-bottom: .35rem;
+}
+
+.event strong {
+    color: #444;
+}
+
+.card hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}

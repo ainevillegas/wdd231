@@ -83,14 +83,20 @@
 
     /* ---------- HOME GRID ---------- */
 
-    .home-grid {
-        grid-template-columns: 2fr 1fr;
-        align-items: stretch;
-    }
+   .home-grid {
+       display: grid;
+       grid-template-columns: 2fr 1fr;
+       gap: 1rem;
+       align-items: start;
+   }
 
-    .home-grid .card {
-        height: 100%;
-    }
+   .home-grid>.card:first-child {
+       grid-column: 1;
+   }
+
+   .home-grid>.weather-card {
+       grid-column: 2;
+   }
 
     /* ---------- WEATHER FORECAST ---------- */
 
