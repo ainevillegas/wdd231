@@ -1,0 +1,50 @@
+.thankyou-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.thankyou-page h1 {
+    text-align: center;
+    color: #0f4c81;
+    margin-bottom: 1rem;
+}
+
+.thankyou-page>p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.application-summary {
+    background-color: #f7f7f7;
+    border-left: 6px solid #0f4c81;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.application-summary h2 {
+    margin-bottom: 1rem;
+    color: #0f4c81;
+}
+
+.application-summary p {
+    margin: 0.75rem 0;
+    line-height: 1.6;
+}
+
+.application-summary span {
+    color: #333;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+@media (max-width: 768px) {
+    .thankyou-page {
+        padding: 1rem;
+    }
+
+    .application-summary {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mabalacat Chamber of Commerce | Home</title>
+
+    <meta name="description"
+        content="Explore the Mabalacat Chamber of Commerce business directory and connect with trusted local organizations.">
+    <meta name="author" content="Lolilaine Curro-Villegas">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Timbuktu Chamber of Commerce Directory">
+    <meta property="og:description"
+        content="Explore the Timbuktu Chamber of Commerce business directory featuring trusted local businesses, services, and community partners.">
+    <meta property="og:image" content="https://ainevillegas.github.io/wdd231/chamber/images/chamber-og.jpg">
+    
+    <meta property="og:url" content="https://ainevillegas.github.io/wdd231/chamber/join.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+        <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+        <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+        <header>
+            <div class="header-container">
+        
+                <a href="index.html" class="logo-title">
+        
+                    <img src="images/mabalacatlogo.png" alt="Mabalacat Chamber of Commerce logo" class="logo" width="65"
+                        height="65">
+        
+                    <span class="site-title">
+                        Mabalacat Chamber of Commerce
+                    </span>
+        
+                </a>
+        
+                <button id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                    aria-controls="navMenu">
+                    ☰
+                </button>
+        
+                <nav aria-label="Main navigation">
+                    <ul id="navMenu">
+        
+                        <li>
+                            <a href="index.html" class="active" aria-current="page">
+                                Home
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="directory.html">
+                                Directory
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="join.html">
+                                Join
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="discover.html">
+                                Discover
+                            </a>
+                        </li>
+        
+                    </ul>
+                </nav>
+        
+            </div>
+        </header>
+
+    <main class="join-page">
+
+        <h1>Join the Chamber</h1>
+
+        <div class="join-layout">
+
+            <form method="get" action="thankyou.html">
+
+                <label for="fname">First Name</label>
+                <input id="fname" type="text" name="fname" title="Enter your first name" autocomplete="given-name"
+                    required>
+
+                <label for="lname">Last Name</label>
+                <input id="lname" type="text" name="lname" title="Enter your last name" autocomplete="family-name"
+                    required>
+
+                <label for="orgtitle">Organizational Title</label>
+                <input id="orgtitle" type="text" name="orgtitle" title="Enter your organizational title"
+                    autocomplete="organization-title" pattern="[A-Za-z -]{7,}" placeholder="Business Manager">
+
+                <label for="email">Email Address</label>
+                <input id="email" type="email" name="email" title="Enter a valid email address" autocomplete="email"
+                    placeholder="example@email.com" required>
+
+                <label for="phone">Mobile Phone Number</label>
+                <input id="phone" type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel"
+                    required>
+
+                <label for="organization">Business/Organization Name</label>
+                <input id="organization" type="text" name="organization" title="Enter your organization name"
+                    autocomplete="organization" required>
+
+                <label for="membership">Membership Level</label>
+                <select id="membership" name="membership" title="Select a membership level" required>
+
+                    <option value="">Select Membership</option>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+
+                </select>
+
+                <label for="description">Business Description</label>
+                <textarea id="description" name="description" title="Describe your business or organization"
+                    rows="5"></textarea>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Apply for Membership">
+
+            </form>
+
+            <section class="membership-cards">
+            
+                <div class="membership-card">
+                    <h2>NP Membership</h2>
+                    View Benefits</a>
+                </div>
+            
+                <div class="membership-card">
+                    <h2>Bronze Membership</h2>
+                    View Benefits</a>
+                </div>
+            
+                <div class="membership-card">
+                    <h2>Silver Membership</h2>
+                    View Benefits</a>
+                </div>
+            
+                <div class="membership-card">
+                    <h2>Gold Membership</h2>
+                    View Benefits</a>
+                </div>
+            
+            </section>
+
+        </div>
+
+        <!-- MODALS -->
+
+        <dialog id="npModal">
+            <h3>NP Membership</h3>
+            <p>Free membership for nonprofit organizations.</p>
+
+            <ul>
+                <li>Directory Listing</li>
+                <li>Networking Events</li>
+                <li>Newsletter Access</li>
+            </ul>
+
+            <button type="button" onclick="document.getElementById('npModal').close()">
+                Close
+            </button>
+        </dialog>
+
+        <dialog id="bronzeModal">
+            <h3>Bronze Membership</h3>
+
+            <ul>
+                <li>All NP Benefits</li>
+                <li>Business Workshops</li>
+                <li>Event Invitations</li>
+            </ul>
+
+            <button type="button" onclick="document.getElementById('bronzeModal').close()">
+                Close
+            </button>
+        </dialog>
+
+        <dialog id="silverModal">
+            <h3>Silver Membership</h3>
+
+            <ul>
+                <li>All Bronze Benefits</li>
+                <li>Advertising Opportunities</li>
+                <li>Discounted Events</li>
+            </ul>
+
+            <button type="button" onclick="document.getElementById('silverModal').close()">
+                Close
+            </button>
+        </dialog>
+
+        <dialog id="goldModal">
+            <h3>Gold Membership</h3>
+
+            <ul>
+                <li>All Silver Benefits</li>
+                <li>Homepage Spotlight</li>
+                <li>Premium Advertising</li>
+                <li>Exclusive Events</li>
+            </ul>
+
+            <button type="button" onclick="document.getElementById('goldModal').close()">
+                Close
+            </button>
+        </dialog>
+
+    </main>
+
+    <footer>
+    
+        <div class="footer-content">
+    
+            <div class="footer-contact">
+    
+                <h2>Mabalacat Chamber of Commerce</h2>
+    
+                <p>Mabalacat City, Pampanga</p>
+    
+                <p>
+                    <a href="mailto:info@mabalacatchamber.org">
+                        info@mabalacatchamber.org
+                    </a>
+                </p>
+    
+                <p>
+                    <a href="tel:+63450000000">
+                        (045) 000-0000
+                    </a>
+                </p>
+    
+            </div>
+    
+            <nav class="social-links" aria-label="Social media links">
+    
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our YouTube page">
+    
+                    <img src="images/youtube.png" alt="" width="44" height="44">
+    
+                </a>
+    
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our Instagram page">
+    
+                    <img src="images/instagram.png" alt="" width="44" height="44">
+    
+                </a>
+    
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our Facebook page">
+    
+                    <img src="images/facebook.png" alt="" width="44" height="44">
+    
+                </a>
+    
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our TikTok page">
+    
+                    <img src="images/tiktok.png" alt="" width="44" height="44">
+    
+                </a>
+    
+            </nav>
+    
+            <div class="footer-project">
+    
+                <p>Aine Curro-Villegas</p>
+                <p>WDD 231 Chamber Project</p>
+                <p id="lastModified"></p>
+    
+            </div>
+    
+        </div>
+    
+    </footer>
+</body>
+
+</html>
