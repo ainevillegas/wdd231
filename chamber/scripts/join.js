@@ -1,18 +1,17 @@
-const timestampField = document.getElementById("timestamp");
+const timestampField = document.querySelector("#timestamp");
 
 if (timestampField) {
     timestampField.value = new Date().toISOString();
 }
 
-document.querySelectorAll("[data-modal]").forEach(link => {
-    link.addEventListener("click", (event) => {
-        event.preventDefault();
+const modalButtons = document.querySelectorAll("[data-modal]");
 
-        const modalId = event.target.dataset.modal;
-        const modal = document.getElementById(modalId);
+modalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const dialog = document.getElementById(button.dataset.modal);
 
-        if (modal) {
-            modal.showModal();
+        if (dialog) {
+            dialog.showModal();
         }
     });
 });

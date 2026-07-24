@@ -1,19 +1,27 @@
-const params = new URLSearchParams(window.location.search);
+const formData = new URLSearchParams(window.location.search);
 
-document.getElementById("fname").textContent =
-    params.get("fname") || "";
+document.querySelector("#fname").textContent =
+    formData.get("fname") || "Not provided";
 
-document.getElementById("lname").textContent =
-    params.get("lname") || "";
+document.querySelector("#lname").textContent =
+    formData.get("lname") || "Not provided";
 
-document.getElementById("email").textContent =
-    params.get("email") || "";
+document.querySelector("#email").textContent =
+    formData.get("email") || "Not provided";
 
-document.getElementById("phone").textContent =
-    params.get("phone") || "";
+document.querySelector("#phone").textContent =
+    formData.get("phone") || "Not provided";
 
-document.getElementById("organization").textContent =
-    params.get("organization") || "";
+document.querySelector("#organization").textContent =
+    formData.get("organization") || "Not provided";
 
-document.getElementById("timestamp").textContent =
-    params.get("timestamp") || "";
+const timestamp = formData.get("timestamp");
+
+if (timestamp) {
+    const submittedDate = new Date(timestamp);
+
+    document.querySelector("#timestamp").textContent =
+        submittedDate.toLocaleString();
+} else {
+    document.querySelector("#timestamp").textContent = "Not provided";
+}

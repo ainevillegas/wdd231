@@ -22,12 +22,10 @@
     <meta property="og:image" content="https://ainevillegas.github.io/wdd231/chamber/images/chamber-og.jpg">
 
     <meta property="og:url" content="https://ainevillegas.github.io/wdd231/chamber/join.html">
-    
-    
+       
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    ```
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 
@@ -39,7 +37,10 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/directory.js" defer></script>
     <script src="scripts/footer.js" defer></script>
-        <script src="scripts/join.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+   
+    <form method="get" action="thankyou.html">
+
 </head>
 
 <body>
@@ -48,6 +49,7 @@
             <div class="header-container">
         
                 <a href="index.html" class="logo-title">
+                    
         
                     <img src="images/mabalacatlogo.png" alt="Mabalacat Chamber of Commerce logo" class="logo" width="65"
                         height="65">
@@ -67,9 +69,11 @@
                     <ul id="navMenu">
         
                         <li>
-                             <a href="index.html" class="active" aria-current="page">
+
+                            <a href="index.html">
                             Home
-                             </a>
+                        </a>
+
                         </li>
         
                         <li>
@@ -148,30 +152,30 @@
                 <input type="submit" value="Apply for Membership">
 
             </form>
-
-        <section class="membership-cards">
         
+        <section class="membership-cards">
             <div class="membership-card">
                 <h2>NP Membership</h2>
-                View Benefits
+                <button type="button" data-modal="npModal">View Benefits</button>
             </div>
         
             <div class="membership-card">
                 <h2>Bronze Membership</h2>
-               View Benefits</a>
+                <button type="button" data-modal="bronzeModal">View Benefits</button>
             </div>
         
             <div class="membership-card">
                 <h2>Silver Membership</h2>
-                View Benefits</a>
+                <button type="button" data-modal="silverModal">View Benefits</button>
             </div>
         
             <div class="membership-card">
                 <h2>Gold Membership</h2>
-            View Benefits</a>
+                <button type="button" data-modal="goldModal">View Benefits</button>
             </div>
-        
         </section>
+
+
 
         </div>
 
@@ -262,28 +266,26 @@
             </div>
     
             <nav class="social-links" aria-label="Social media links">
+
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+                <img src="images/facebook.png" alt="" width="44" height="44">
+            </a>
+
     
                 <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
                     aria-label="Visit our YouTube page">
-    
-                    <img src="images/youtube.png" alt="" width="44" height="44">
+                        <img src="images/youtube.png" alt="" width="44" height="44">
     
                 </a>
     
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" 
                     aria-label="Visit our Instagram page">
-    
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Visit our Facebook page">
-    
-                    <img src="images/facebook.png" alt="" width="44" height="44">
-    
+                        <img src="images/instagram.png" alt="" width="44" height="44">
                 </a>
     
                 <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"
                     aria-label="Visit our TikTok page">
-    
-                    <img src="images/tiktok.png" alt="" width="44" height="44">
+                        <img src="images/tiktok.png" alt="" width="44" height="44">
     
                 </a>
     

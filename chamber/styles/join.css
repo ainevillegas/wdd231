@@ -30,6 +30,12 @@ textarea {
 }
 
 .membership-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: card-entry 0.6s ease forwards;
+}
+
+.membership-card {
     background: #f4f4f4;
     padding: 1rem;
     border-radius: 8px;
@@ -44,11 +50,54 @@ textarea {
     color: #00758d;
 }
 
+.membership-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+@keyframes card-entry {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+}
+
 .membership-card a {
     display: inline-block;
     color: #00758d;
     text-decoration: none;
     font-weight: 600;
+}
+
+.membership-card button {
+    border: none;
+    background: none;
+    padding: 0;
+    color: #007b8a;
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+}
+
+.membership-card button:hover,
+.membership-card button:focus {
+    color: #004f59;
+    text-decoration-thickness: 2px;
 }
 
 .membership-card a:hover {
