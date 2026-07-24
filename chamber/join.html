@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mabalacat Chamber of Commerce | Join</title>
+
+    <title>Mabalacat Chamber of Commerce Directory | Join</title>
 
 
     <meta name="description"
@@ -14,11 +15,10 @@
 
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-    
+    <meta property="og:title" content="Mabalacat Chamber of Commerce Directory | Join">
 
-    <meta property="og:title" content="Timbuktu Chamber of Commerce Directory">
     <meta property="og:description"
-        content="Explore the Timbuktu Chamber of Commerce business directory featuring trusted local businesses, services, and community partners.">
+        content="Explore the Mabalacat Chamber of Commerce business directory featuring trusted local businesses, services, and community partners.">
     <meta property="og:image" content="https://ainevillegas.github.io/wdd231/chamber/images/chamber-og.jpg">
 
     <meta property="og:url" content="https://ainevillegas.github.io/wdd231/chamber/join.html">
@@ -182,59 +182,60 @@
         <!-- MODALS -->
 
         <dialog id="npModal">
-            <h3>NP Membership</h3>
-            <p>Free membership for nonprofit organizations.</p>
-
+             <h3>NP Membership</h3>
+    
+             <p>Free membership for nonprofit organizations.</p>
+    
             <ul>
                 <li>Directory Listing</li>
-                <li>Networking Events</li>
+             <li>Networking Events</li>
                 <li>Newsletter Access</li>
-            </ul>
-
-            <button type="button" onclick="document.getElementById('npModal').close()">
-                Close
-            </button>
+             </ul>
+    
+             <button type="button" class="close-modal" data-modal="npModal">
+             Close
+         </button>
         </dialog>
 
         <dialog id="bronzeModal">
             <h3>Bronze Membership</h3>
-
+        
             <ul>
                 <li>All NP Benefits</li>
                 <li>Business Workshops</li>
                 <li>Event Invitations</li>
             </ul>
-
-            <button type="button" onclick="document.getElementById('bronzeModal').close()">
+        
+            <button type="button" class="close-modal" data-modal="bronzeModal">
                 Close
             </button>
         </dialog>
 
         <dialog id="silverModal">
             <h3>Silver Membership</h3>
-
+        
             <ul>
                 <li>All Bronze Benefits</li>
                 <li>Advertising Opportunities</li>
                 <li>Discounted Events</li>
             </ul>
-
-            <button type="button" onclick="document.getElementById('silverModal').close()">
+        
+            <button type="button" class="close-modal" data-modal="silverModal">
                 Close
             </button>
         </dialog>
 
         <dialog id="goldModal">
             <h3>Gold Membership</h3>
-
+        
             <ul>
                 <li>All Silver Benefits</li>
                 <li>Homepage Spotlight</li>
                 <li>Premium Advertising</li>
                 <li>Exclusive Events</li>
             </ul>
-
-            <button type="button" onclick="document.getElementById('goldModal').close()">
+        
+            <button type="button" class="close-modal" data-modal="goldModal">
                 Close
             </button>
         </dialog>

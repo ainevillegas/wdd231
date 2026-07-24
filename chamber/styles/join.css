@@ -1,53 +1,126 @@
+/* =========================
+   JOIN PAGE
+========================= */
+
+.join-page {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+}
+
+.join-page h1 {
+    margin-bottom: 1.5rem;
+    color: #006f7c;
+    text-align: center;
+}
+
 .join-layout {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+
+/* =========================
+   APPLICATION FORM
+========================= */
+
+.join-layout form {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 }
 
-label {
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
+.join-layout label {
+    margin-top: 0.5rem;
+    color: #222222;
+    font-weight: 700;
 }
 
-input,
-select,
-textarea {
-    padding: .75rem;
-    margin-top: .25rem;
+.join-layout input,
+.join-layout select,
+.join-layout textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #767676;
+    border-radius: 0.35rem;
+    background-color: #ffffff;
+    color: #222222;
+    font: inherit;
 }
+
+.join-layout textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.join-layout input:focus,
+.join-layout select:focus,
+.join-layout textarea:focus {
+    outline: 3px solid #006f7c;
+    outline-offset: 2px;
+}
+
+.join-layout input:required:valid,
+.join-layout select:required:valid {
+    border-left: 5px solid #2e7d32;
+}
+
+.join-layout input:required:invalid:not(:placeholder-shown),
+.join-layout select:required:invalid {
+    border-left: 5px solid #b00020;
+}
+
+.join-layout input[type="submit"] {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border: 2px solid #006f7c;
+    border-radius: 0.4rem;
+    background-color: #006f7c;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.join-layout input[type="submit"]:hover {
+    background-color: #004f59;
+    border-color: #004f59;
+}
+
+.join-layout input[type="submit"]:focus-visible {
+    outline: 3px solid #000000;
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   MEMBERSHIP CARDS
+========================= */
 
 .membership-cards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
+    align-content: start;
 }
 
 .membership-card {
+    padding: 1.25rem;
+    border: 1px solid #d6d6d6;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
     opacity: 0;
     transform: translateY(20px);
     animation: card-entry 0.6s ease forwards;
 }
 
-.membership-card {
-    background: #f4f4f4;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s forwards;
-}
-
-.membership-card h2 {
-    margin-bottom: 0.5rem;
-    color: #00758d;
+.membership-card:nth-child(1) {
+    animation-delay: 0s;
 }
 
 .membership-card:nth-child(2) {
@@ -62,89 +135,135 @@ textarea {
     animation-delay: 0.45s;
 }
 
+.membership-card h2 {
+    margin: 0 0 0.75rem;
+    color: #006f7c;
+    font-size: 1.2rem;
+}
+
+.membership-card button {
+    padding: 0.45rem 0.75rem;
+    border: 2px solid #006f7c;
+    border-radius: 0.35rem;
+    background-color: #ffffff;
+    color: #006f7c;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.membership-card button:hover {
+    background-color: #006f7c;
+    color: #ffffff;
+}
+
+.membership-card button:focus-visible {
+    outline: 3px solid #000000;
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   CARD ANIMATION
+========================= */
+
 @keyframes card-entry {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
+
+/* =========================
+   MODALS
+========================= */
+
+dialog {
+    width: min(90%, 500px);
+    padding: 1.5rem;
+    border: none;
+    border-radius: 0.6rem;
+    background-color: #ffffff;
+    color: #222222;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 25%);
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 65%);
+}
+
+dialog h3 {
+    margin-top: 0;
+    color: #006f7c;
+    font-size: 1.4rem;
+}
+
+dialog ul {
+    padding-left: 1.25rem;
+}
+
+dialog li {
+    margin-bottom: 0.5rem;
+}
+
+.close-modal {
+    margin-top: 1rem;
+    padding: 0.65rem 1rem;
+    border: 2px solid #006f7c;
+    border-radius: 0.35rem;
+    background-color: #006f7c;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    background-color: #004f59;
+    border-color: #004f59;
+}
+
+.close-modal:focus-visible {
+    outline: 3px solid #000000;
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   DESKTOP LAYOUT
+========================= */
+
+@media screen and (min-width: 768px) {
+    .join-page h1 {
+        text-align: left;
+    }
+
+    .join-layout {
+        grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
+        align-items: start;
+    }
+
+    .membership-cards {
+        position: sticky;
+        top: 1rem;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
 
 @media (prefers-reduced-motion: reduce) {
     .membership-card {
         opacity: 1;
         transform: none;
         animation: none;
-    }
-}
-
-.membership-card a {
-    display: inline-block;
-    color: #00758d;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.membership-card button {
-    border: none;
-    background: none;
-    padding: 0;
-    color: #007b8a;
-    text-decoration: underline;
-    cursor: pointer;
-    font: inherit;
-}
-
-.membership-card button:hover,
-.membership-card button:focus {
-    color: #004f59;
-    text-decoration-thickness: 2px;
-}
-
-.membership-card a:hover {
-    text-decoration: underline;
-}
-
-.membership-card:nth-child(1) {
-    animation-delay: .2s;
-}
-
-.membership-card:nth-child(2) {
-    animation-delay: .4s;
-}
-
-.membership-card:nth-child(3) {
-    animation-delay: .6s;
-}
-
-.membership-card:nth-child(4) {
-    animation-delay: .8s;
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-dialog {
-    padding: 1.5rem;
-    border-radius: 10px;
-}
-
-::backdrop {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-@media (min-width: 768px) {
-
-    .join-layout {
-        grid-template-columns: 2fr 1fr;
-        align-items: start;
     }
 }
