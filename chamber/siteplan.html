@@ -3,28 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Your Name">
-    <meta name="description" content="Website planning document for Party Tray Express">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Party Tray Express Site Plan</title>
+    <meta name="author" content="Lolilaine Curro-Villegas">
+    <meta name="description"
+        content="Directory and website planning document for Party Tray Express, including its purpose, audience scenarios, colors, typography, and responsive wireframes.">
 
-    <link rel="stylesheet" href="styles/siteplan.css">
+    <title>Directory | Party Tray Express Site Plan</title>
 
+
+    <link rel="icon" type="image/x-icon" href="images/cook.ico">
+
+    <meta property="og:title" content="Directory | Party Tray Express Site Plan">
+    <meta property="og:description"
+        content="Explore the Party Tray Express site plan, including its purpose, audience scenarios, design system, typography, and responsive wireframes.">
+    <meta property="og:image" content="https://ainevillegas.github.io/wdd231/final/images/party-tray-preview.jpg">
+    <meta property="og:url" content="https://ainevillegas.github.io/wdd231/final/siteplan.html">
     <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/siteplan-large.css">
+
+    <script src="scripts/siteplan.js" defer></script>
 </head>
 
 <body>
+
     <header>
-        <h1>Party Tray Express - Website Plan</h1>
+        <p class="site-brand">Party Tray Express</p>
         <p>Your affordable choice for delicious party trays and catering packages.</p>
     </header>
 
     <main>
+
+        <h1>Directory | Party Tray Express Site Plan</h1>
 
         <section>
             <h2>Site Name</h2>
@@ -37,7 +55,10 @@
                 services for families, offices, and special occasions.
             </p>
 
-            <p><strong>Optional Domain:</strong> partytrayexpress.com</p>
+            <p>
+                <strong>Optional domain:</strong>
+                partytrayexpress.com
+            </p>
         </section>
 
         <section>
@@ -68,32 +89,38 @@
 
             <div class="color-container">
 
-                <div class="color-card">
-                    <div class="color-box primary"></div>
-                    <h3>Teal (#008080)</h3>
-                    <p>
-                        Used for the header, navigation menu,
-                        headings, buttons, and footer.
-                    </p>
-                </div>
+                <article class="color-card">
+                    <div class="color-box primary-color"></div>
 
-                <div class="color-card">
-                    <div class="color-box secondary"></div>
-                    <h3>Light Coral (#FF7F50)</h3>
-                    <p>
-                        Used for call-to-action buttons,
-                        highlights, borders, and accents.
-                    </p>
-                </div>
+                    <h3>Teal — #008080</h3>
 
-                <div class="color-card">
-                    <div class="color-box background"></div>
-                    <h3>Light Mint (#F0FFFA)</h3>
                     <p>
-                        Used as the page background and section
-                        backgrounds to create a fresh and clean appearance.
+                        Used for the header, headings, links, buttons,
+                        navigation elements, and footer.
                     </p>
-                </div>
+                </article>
+
+                <article class="color-card">
+                    <div class="color-box secondary-color"></div>
+
+                    <h3>Light Coral — #FF7F50</h3>
+
+                    <p>
+                        Used for call-to-action buttons, section borders,
+                        highlights, and decorative accents.
+                    </p>
+                </article>
+
+                <article class="color-card">
+                    <div class="color-box background-color"></div>
+
+                    <h3>Light Mint — #F0FFFA</h3>
+
+                    <p>
+                        Used as the page background to create a clean,
+                        light, and welcoming appearance.
+                    </p>
+                </article>
 
             </div>
         </section>
@@ -102,95 +129,102 @@
             <h2>Typography</h2>
 
             <p>
-                <strong>Poppins</strong> will be used for headings, navigation,
-                and section titles.
+                <strong>Poppins</strong> will be used for the main heading,
+                section headings, site name, navigation, and important labels.
             </p>
 
             <p>
-                <strong>Open Sans</strong> will be used for body text,
-                descriptions, forms, and general content.
+                <strong>Open Sans</strong> will be used for paragraphs,
+                lists, descriptions, forms, and general page content.
             </p>
-
         </section>
 
-<section>
-    <h2>Wireframe</h2>
+        <section>
+            <h2>Wireframes</h2>
 
-    <h3>Mobile View</h3>
-    <img src="images/mobile.png" alt="Mobile wireframe for Party Tray Express" class="wireframe-image">
+            <div class="wireframe-container">
 
-    <h3>Desktop View</h3>
-    <img src="images/desktop.png" alt="Desktop wireframe for Party Tray Express" class="wireframe-image">
+                <figure>
+                    <img src="images/mobile.png" alt="Mobile home page wireframe for Party Tray Express" width="400"
+                        height="900" loading="lazy">
 
-    <p>
-        These wireframes represent the planned responsive layout
-        for the Party Tray Express website.
-    </p>
-</section>
+                    <figcaption>Mobile view</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/desktop.png" alt="Desktop home page wireframe for Party Tray Express" width="900"
+                        height="700" loading="lazy">
+
+                    <figcaption>Desktop view</figcaption>
+                </figure>
+
+            </div>
+
+            <p>
+                The wireframes illustrate the planned responsive home page
+                layout for Party Tray Express. The mobile layout displays the
+                content in a single column, while the desktop layout uses a
+                wider multi-column presentation.
+            </p>
+        </section>
 
     </main>
 
     <footer>
-    
+
         <div class="footer-content">
-    
+
             <div class="footer-contact">
-    
-                <h2>Mabalacat Chamber of Commerce</h2>
-    
+                <h2>Party Tray Express</h2>
+
                 <p>Mabalacat City, Pampanga</p>
-    
+
                 <p>
-                    <a href="mailto:info@mabalacatchamber.org">
-                        info@mabalacatchamber.org
+                    <a href="mailto:info@partytrayexpress.com">
+                        info@partytrayexpress.com
                     </a>
                 </p>
-    
+
                 <p>
                     <a href="tel:+63450000000">
                         (045) 000-0000
                     </a>
                 </p>
-    
             </div>
-    
+
             <nav class="social-links" aria-label="Social media links">
-    
+
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Visit our Facebook page">
+                    aria-label="Visit Party Tray Express on Facebook">
                     <img src="images/facebook.png" alt="" width="44" height="44">
                 </a>
-    
-    
+
                 <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Visit our YouTube page">
+                    aria-label="Visit Party Tray Express on YouTube">
                     <img src="images/youtube.png" alt="" width="44" height="44">
-    
                 </a>
-    
+
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Visit our Instagram page">
+                    aria-label="Visit Party Tray Express on Instagram">
                     <img src="images/instagram.png" alt="" width="44" height="44">
                 </a>
-    
+
                 <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Visit our TikTok page">
+                    aria-label="Visit Party Tray Express on TikTok">
                     <img src="images/tiktok.png" alt="" width="44" height="44">
-    
                 </a>
-    
+
             </nav>
-    
+
             <div class="footer-project">
-    
                 <p>Aine Curro-Villegas</p>
-                <p>WDD 231 Chamber Project</p>
+                <p>WDD 231 Final Project</p>
+                <p>&copy; <span id="currentYear"></span> Party Tray Express</p>
                 <p id="lastModified"></p>
-    
             </div>
-    
+
         </div>
-    
+
     </footer>
 
 </body>
