@@ -1,0 +1,257 @@
+/* ==============================
+   DISCOVER PAGE GENERAL STYLES
+   ============================== */
+
+.discover-main {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 1.5rem 0 2.5rem;
+}
+
+.discover-introduction {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+.discover-introduction h1 {
+    margin-bottom: 0.75rem;
+}
+
+.discover-introduction p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   VISIT MESSAGE
+   ============================== */
+
+.visit-message {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    border-left: 5px solid #8b1e1e;
+    border-radius: 6px;
+    background-color: #f5e9d8;
+    color: #2b1b12;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   ACCESSIBILITY
+   ============================== */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* ==============================
+   SMALL VIEW: 320px–640px
+   ============================== */
+
+#discover-grid {
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+
+/* ==============================
+   CARD DESIGN
+   ============================== */
+
+.card {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    gap: 0.75rem;
+
+    min-width: 0;
+    overflow: hidden;
+
+    padding: 1rem;
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+    color: #202020;
+
+    box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+}
+
+.card h2 {
+    margin: 0;
+    color: #6f1717;
+    font-size: 1.35rem;
+    line-height: 1.25;
+}
+
+.card figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card address {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.card p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.card button {
+    justify-self: start;
+
+    min-height: 44px;
+    padding: 0.7rem 1rem;
+
+    border: 2px solid #6f1717;
+    border-radius: 6px;
+
+    background-color: #6f1717;
+    color: #ffffff;
+
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card button:hover,
+.card button:focus-visible {
+    background-color: #ffffff;
+    color: #6f1717;
+}
+
+.card button:focus-visible {
+    outline: 3px solid #f2b705;
+    outline-offset: 3px;
+}
+
+
+/* Assign each card to a named area */
+
+.card:nth-child(1) {
+    grid-area: card1;
+}
+
+.card:nth-child(2) {
+    grid-area: card2;
+}
+
+.card:nth-child(3) {
+    grid-area: card3;
+}
+
+.card:nth-child(4) {
+    grid-area: card4;
+}
+
+.card:nth-child(5) {
+    grid-area: card5;
+}
+
+.card:nth-child(6) {
+    grid-area: card6;
+}
+
+.card:nth-child(7) {
+    grid-area: card7;
+}
+
+.card:nth-child(8) {
+    grid-area: card8;
+}
+
+
+/* ==============================
+   MEDIUM VIEW: 641px–1024px
+   ============================== */
+
+@media screen and (min-width: 641px) {
+
+    #discover-grid {
+        grid-template-columns:
+            minmax(0, 1fr) minmax(0, 1fr);
+
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+
+    .card img {
+        transition:
+            transform 0.3s ease,
+            filter 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .card figure:hover img {
+        transform: scale(1.05);
+        filter: brightness(1.08);
+    }
+
+    .card figure:hover {
+        box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
+    }
+}
+
+
+/* ==============================
+   LARGE VIEW: 1025px AND ABOVE
+   ============================== */
+
+@media screen and (min-width: 1025px) {
+
+    #discover-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+
+    .discover-main {
+        padding-top: 2rem;
+    }
+
+    .card {
+        padding: 1.1rem;
+    }
+}

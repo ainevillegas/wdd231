@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Mabalacat | Mabalacat Chamber of Commerce</title>
+
+    <meta name="description"
+        content="Discover attractions, landmarks, recreational destinations, and community features in Mabalacat City, Pampanga.">
+
+    <meta name="author" content="Lolilaine Curro-Villegas">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Discover Mabalacat | Mabalacat Chamber of Commerce">
+
+    <meta property="og:description"
+        content="Discover attractions, landmarks, and community destinations in Mabalacat City, Pampanga.">
+
+    <meta property="og:image" content="https://ainevillegas.github.io/wdd231/chamber/images/mabalacat-hero-large.jpg">
+
+    <meta property="og:url" content="https://ainevillegas.github.io/wdd231/chamber/discover.html">
+
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <a href="index.html" class="logo-title">
+
+                <img src="images/mabalacatlogo.png" alt="Mabalacat Chamber of Commerce logo" class="logo" width="65"
+                    height="65">
+
+                <span class="site-title">
+                    Mabalacat Chamber of Commerce
+                </span>
+            </a>
+
+            <button id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="navMenu">
+                ☰
+            </button>
+
+            <nav aria-label="Main navigation">
+                <ul id="navMenu">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="directory.html">
+                            Directory
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="join.html">
+                            Join
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="discover.html" class="active" aria-current="page">
+                            Discover
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="discover-main">
+
+        <section class="discover-introduction">
+
+            <h1>Discover Mabalacat City</h1>
+
+            <p>
+                Explore some of the landmarks, attractions, recreational
+                destinations, and community spaces that make Mabalacat City
+                a dynamic place to visit, live, and conduct business.
+            </p>
+
+        </section>
+
+        <aside id="visit-message" class="visit-message" aria-live="polite">
+        </aside>
+
+        <section aria-labelledby="places-heading">
+
+            <h2 id="places-heading" class="visually-hidden">
+                Places to Visit in Mabalacat
+            </h2>
+
+            <div id="discover-grid">
+                <!-- Cards are generated using discover.js -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-contact">
+
+                <h2>Mabalacat Chamber of Commerce</h2>
+
+                <p>Mabalacat City, Pampanga</p>
+
+                <p>
+                    <a href="mailto:info@mabalacatchamber.org">
+                        info@mabalacatchamber.org
+                    </a>
+                </p>
+
+                <p>
+                    <a href="tel:+63450000000">
+                        (045) 000-0000
+                    </a>
+                </p>
+
+            </div>
+
+            <nav class="social-links" aria-label="Social media links">
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our Facebook page">
+
+                    <img src="images/facebook.png" alt="" width="44" height="44">
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our YouTube page">
+
+                    <img src="images/youtube.png" alt="" width="44" height="44">
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our Instagram page">
+
+                    <img src="images/instagram.png" alt="" width="44" height="44">
+                </a>
+
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our TikTok page">
+
+                    <img src="images/tiktok.png" alt="" width="44" height="44">
+                </a>
+
+            </nav>
+
+            <div class="footer-project">
+
+                <p>Aine Curro-Villegas</p>
+                <p>WDD 231 Chamber Project</p>
+
+                <p>
+                    &copy; <span id="currentyear"></span>
+                    Mabalacat Chamber of Commerce
+                </p>
+
+                <p id="lastModified"></p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
