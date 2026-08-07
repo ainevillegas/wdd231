@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Sunrise Walk",
+        "category": "outdoor",
+        "duration": "1 hour",
+        "budget": "Free",
+        "description": "Start the day with a relaxed sunrise walk along a safe public waterfront or park route."
+    },
+    {
+        "id": 2,
+        "name": "Coffee Shop Study Session",
+        "category": "indoor",
+        "duration": "2 hours",
+        "budget": "₱200",
+        "description": "Spend a focused study block in a quiet cafe and use a simple task list to stay productive."
+    },
+    {
+        "id": 3,
+        "name": "Public Museum Visit",
+        "category": "culture",
+        "duration": "2 hours",
+        "budget": "₱150",
+        "description": "Explore local history, art, and community exhibits while taking notes on interesting displays."
+    },
+    {
+        "id": 4,
+        "name": "Neighborhood Photo Walk",
+        "category": "outdoor",
+        "duration": "90 minutes",
+        "budget": "Free",
+        "description": "Practice composition by photographing architecture, plants, signs, textures, and public spaces."
+    },
+    {
+        "id": 5,
+        "name": "Budget Meal Hunt",
+        "category": "food",
+        "duration": "1 hour",
+        "budget": "₱250",
+        "description": "Try a new affordable meal and rate it for taste, value, service, and overall experience."
+    },
+    {
+        "id": 6,
+        "name": "Library Reading Hour",
+        "category": "indoor",
+        "duration": "1 hour",
+        "budget": "Free",
+        "description": "Choose a book or article and complete one uninterrupted hour of reading in a public library."
+    },
+    {
+        "id": 7,
+        "name": "Local Market Visit",
+        "category": "culture",
+        "duration": "90 minutes",
+        "budget": "₱300",
+        "description": "Explore a local market and observe products, prices, customer flow, and community activity."
+    },
+    {
+        "id": 8,
+        "name": "Park Picnic",
+        "category": "outdoor",
+        "duration": "2 hours",
+        "budget": "₱350",
+        "description": "Prepare a simple meal and enjoy a low-cost picnic at a nearby public park with proper cleanup."
+    },
+    {
+        "id": 9,
+        "name": "Home Movie Night",
+        "category": "indoor",
+        "duration": "2 hours",
+        "budget": "₱100",
+        "description": "Plan a low-cost movie night at home with snacks and a short review after watching."
+    },
+    {
+        "id": 10,
+        "name": "Street Food Sampling",
+        "category": "food",
+        "duration": "1 hour",
+        "budget": "₱250",
+        "description": "Sample a few familiar street-food options from clean vendors and compare flavor and value."
+    },
+    {
+        "id": 11,
+        "name": "Sketching Session",
+        "category": "creative",
+        "duration": "1 hour",
+        "budget": "₱120",
+        "description": "Bring a notebook and sketch a building, object, or scene using basic shapes and shading."
+    },
+    {
+        "id": 12,
+        "name": "Playlist and Journaling",
+        "category": "creative",
+        "duration": "45 minutes",
+        "budget": "Free",
+        "description": "Create a short playlist and write a one-page reflection about the week, goals, or ideas."
+    },
+    {
+        "id": 13,
+        "name": "Community Sports Hour",
+        "category": "outdoor",
+        "duration": "1 hour",
+        "budget": "₱100",
+        "description": "Join or organize a casual badminton, basketball, or walking session in a public recreation area."
+    },
+    {
+        "id": 14,
+        "name": "Simple Recipe Challenge",
+        "category": "food",
+        "duration": "90 minutes",
+        "budget": "₱300",
+        "description": "Cook one simple recipe using a fixed budget and document the ingredients, process, and result."
+    },
+    {
+        "id": 15,
+        "name": "Digital Declutter",
+        "category": "indoor",
+        "duration": "45 minutes",
+        "budget": "Free",
+        "description": "Organize downloads, screenshots, browser bookmarks, and important files into clear folders."
+    }
+]

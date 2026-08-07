@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Lolilaine Curro-Villegas">
+    <meta name="description" content="Weekend Simple helps users find affordable weekend activities,
+    save favorites, and build a simple personal plan.">
+
+    <meta property="og:title" content="Weekend Simple | Plan">
+    <meta property="og:description" content="Find affordable weekend activities and create a simple plan.">
+    <meta property="og:type" content="website">
+
+    <title>Weekend Simple | Plan</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/tray.css">
+
+    <!-- JS -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
+    <link rel="icon" href="images/favicon.ico" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="module" src="scripts/main.js"></script>
+</head>
+
+
+<body>
+
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a class="brand" href="index.html">
+                Weekend Simple
+            </a>
+
+
+            <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+                Menu
+            </button>
+
+
+            <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="activities.html">
+                            Activities
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="plan.html">
+                            Plan
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main id="main-content">
+
+        <h1>
+            Build Your Weekend Plan
+        </h1>
+
+
+        <p id="favorite-summary" class="notice">
+        </p>
+
+
+        <p id="saved-message" class="help" aria-live="polite">
+        </p>
+
+
+        <form id="planner-form" action="form-action.html" method="get">
+
+
+            <div class="form-row">
+
+                <label for="name">
+                    Name
+                </label>
+
+                <input id="name" name="name" type="text" autocomplete="name" required>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input id="email" name="email" type="email" autocomplete="email" required>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <label for="date">
+                    Preferred Date
+                </label>
+
+                <input id="date" name="date" type="date" required>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <label for="activity">
+                    Preferred Activity Type
+                </label>
+
+                <select id="activity" name="activity" required>
+
+                    <option value="">
+                        Choose One
+                    </option>
+
+                    <option value="outdoor">
+                        Outdoor
+                    </option>
+
+                    <option value="indoor">
+                        Indoor
+                    </option>
+
+                    <option value="culture">
+                        Culture
+                    </option>
+
+                    <option value="food">
+                        Food
+                    </option>
+
+                    <option value="creative">
+                        Creative
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <label for="notes">
+                    Notes
+                </label>
+
+                <textarea id="notes" name="notes" rows="5" maxlength="300"
+                    placeholder="Optional details for your weekend plan"></textarea>
+
+            </div>
+
+
+            <div class="actions">
+
+                <button type="submit">
+                    Submit Plan
+                </button>
+
+                <button id="clear-storage" class="button secondary" type="button">
+                    Clear Saved Data
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <!-- Website Information -->
+        <div class="footer-contact">
+
+            <h2>Weekend Simple</h2>
+
+            <p>
+                Simple and affordable ideas for your weekend.
+            </p>
+
+            <p>
+                Browse activities, save favorites,
+                and create your weekend plan.
+            </p>
+
+            <p>
+                <a href="attributions.html">
+                    Attributions
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- Social Media Links -->
+        <nav class="social-links" aria-label="Social media links">
+
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit YouTube">
+                <img src="images/youtube.png" alt="" width="44" height="44" loading="lazy">
+            </a>
+
+
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram">
+                <img src="images/instagram.png" alt="" width="44" height="44" loading="lazy">
+            </a>
+
+
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Facebook">
+                <img src="images/facebook.png" alt="" width="44" height="44" loading="lazy">
+            </a>
+
+
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit TikTok">
+                <img src="images/tiktok.png" alt="" width="44" height="44" loading="lazy">
+            </a>
+
+        </nav>
+
+
+        <!-- Project Information -->
+        <div class="footer-project">
+
+            <p>
+                &copy;
+                <span id="year"></span>
+                Weekend Simple
+            </p>
+
+            <p>
+                Aine Curro-Villegas
+            </p>
+
+            <p>
+                WDD 231 Final Project
+            </p>
+
+            <p>
+                <a href="attributions.html">
+                    Attributions
+                </a>
+            </p>
+
+            <p>
+                <a href="REPLACE-WITH-YOUR-PUBLIC-VIDEO-URL" target="_blank" rel="noopener noreferrer">
+                    Project Demonstration Video
+                </a>
+            </p>
+
+            <p id="lastModified"></p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,762 @@
+/* ==============================
+   GLOBAL VARIABLES
+   ============================== */
+
+:root {
+    --navy: #0b3558;
+    --blue: #166088;
+    --teal: #2d7f8c;
+    --light: #f5f8fa;
+    --white: #ffffff;
+    --text: #17222b;
+    --muted: #5a6872;
+    --border: #d5dde3;
+    --focus: #ffbf47;
+
+    --max-width: 1120px;
+}
+
+
+/* ==============================
+   RESET / BASE
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: var(--text);
+    background-color: var(--white);
+
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   TYPOGRAPHY
+   ============================== */
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    color: var(--navy);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    color: var(--blue);
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+
+/* ==============================
+   ACCESSIBILITY
+   ============================== */
+
+.skip-link {
+    position: absolute;
+
+    left: -9999px;
+    top: 0;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+
+    z-index: 1000;
+
+    padding: 0.75rem 1rem;
+
+    background-color: var(--white);
+    color: var(--navy);
+
+    outline: 3px solid var(--focus);
+}
+
+
+/* Visible keyboard focus */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+}
+
+
+/* ==============================
+   IMAGES
+   ============================== */
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.site-header {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.header-inner {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 0.9rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+}
+
+
+/* ==============================
+   BRAND
+   ============================== */
+
+.brand {
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.brand:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   HAMBURGER MENU
+   ============================== */
+
+.menu-button {
+    padding: 0.55rem 0.75rem;
+
+    border: 1px solid var(--white);
+    border-radius: 0.35rem;
+
+    background-color: transparent;
+
+    color: var(--white);
+
+    font: inherit;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   NAVIGATION
+   Mobile first
+   ============================== */
+
+.site-nav {
+    display: none;
+
+    background-color: var(--navy);
+}
+
+
+/* JavaScript adds this class */
+
+.site-nav.open {
+    display: block;
+}
+
+
+.site-nav ul {
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0 1rem 1rem;
+}
+
+
+.site-nav a {
+    display: block;
+
+    padding: 0.65rem 0.7rem;
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    border-radius: 0.3rem;
+}
+
+
+.site-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+
+/* Wayfinding */
+
+.site-nav a[aria-current="page"] {
+    background-color: rgba(255, 255, 255, 0.2);
+
+    font-weight: 700;
+}
+
+
+/* ==============================
+   MAIN
+   ============================== */
+
+main {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 1.25rem 1rem 3rem;
+}
+
+
+/* ==============================
+   HERO
+   ============================== */
+
+.hero {
+    padding: 2.8rem 1.2rem;
+
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+
+    background:
+        linear-gradient(135deg,
+            #eaf6f8,
+            #f8fbfc);
+}
+
+
+.hero h1 {
+    margin-top: 0;
+
+    font-size: 2.2rem;
+
+    line-height: 1.15;
+}
+
+
+.hero p {
+    max-width: 66ch;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.button,
+button {
+    display: inline-block;
+
+    padding: 0.7rem 1rem;
+
+    border: 0;
+    border-radius: 0.4rem;
+
+    background-color: var(--blue);
+
+    color: var(--white);
+
+    font: inherit;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+.button:hover,
+button:hover {
+    filter: brightness(0.95);
+}
+
+
+.button.secondary {
+    background-color: var(--white);
+
+    color: var(--navy);
+
+    border: 1px solid var(--navy);
+}
+
+
+/* ==============================
+   BUTTON GROUPS
+   ============================== */
+
+.actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+
+    margin-top: 1rem;
+}
+
+
+/* ==============================
+   GRID
+   ============================== */
+
+.grid {
+    display: grid;
+
+    gap: 1rem;
+}
+
+
+.three-up {
+    margin-top: 1.4rem;
+}
+
+
+/* ==============================
+   CARDS
+   ============================== */
+
+.card {
+    padding: 1rem;
+
+    border: 1px solid var(--border);
+
+    border-radius: 0.6rem;
+
+    background-color: var(--white);
+}
+
+
+.card h2,
+.card h3 {
+    margin-top: 0;
+}
+
+
+/* Activity information */
+
+.card-meta {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0.35rem 0.75rem;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.card-meta li {
+    padding: 0.4rem 0.5rem;
+
+    border-radius: 0.3rem;
+
+    background-color: var(--light);
+}
+
+
+/* ==============================
+   FILTER AREA
+   ============================== */
+
+.filters {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: end;
+
+    gap: 0.75rem;
+
+    margin: 1rem 0;
+}
+
+
+.filter-group {
+    width: 100%;
+}
+
+
+/* ==============================
+   FORMS
+   ============================== */
+
+form {
+    max-width: 720px;
+}
+
+
+.form-row {
+    margin-bottom: 1rem;
+}
+
+
+label {
+    display: block;
+
+    margin-bottom: 0.3rem;
+
+    font-weight: 700;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 0.7rem;
+
+    border: 1px solid #8b99a4;
+
+    border-radius: 0.35rem;
+
+    background-color: var(--white);
+
+    color: var(--text);
+
+    font: inherit;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==============================
+   HELP TEXT
+   ============================== */
+
+.help {
+    color: var(--muted);
+
+    font-size: 0.92rem;
+}
+
+
+/* ==============================
+   NOTICES
+   ============================== */
+
+.notice {
+    margin: 1rem 0;
+
+    padding: 0.9rem 1rem;
+
+    background-color: #eef8f2;
+
+    border-left: 4px solid #277a4b;
+}
+
+
+/* ==============================
+   MODAL DIALOG
+   ============================== */
+
+dialog {
+    width: min(92vw, 620px);
+
+    padding: 1.2rem;
+
+    border: 1px solid var(--border);
+
+    border-radius: 0.6rem;
+
+    background-color: var(--white);
+
+    color: var(--text);
+}
+
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+
+dialog h2 {
+    margin-top: 0;
+}
+
+
+.dialog-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+
+    margin-top: 1rem;
+}
+
+
+/* The form inside the dialog should
+   not behave like the planner form */
+
+.dialog-actions form {
+    margin: 0;
+}
+
+
+/* ==============================
+   FORM ACTION RESULTS
+   ============================== */
+
+.result-list {
+    padding-left: 1.2rem;
+}
+
+
+.result-list li {
+    margin-bottom: 0.5rem;
+}
+
+
+.result-list strong {
+    color: var(--navy);
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.site-footer {
+    background-color: var(--navy);
+    color: var(--white);
+
+    border-top: 1px solid var(--border);
+}
+
+
+.footer-content {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 2rem 1rem;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+}
+
+
+.footer-contact h2 {
+    margin-top: 0;
+
+    color: var(--white);
+
+    font-size: 1.2rem;
+}
+
+
+.footer-contact p,
+.footer-project p {
+    margin: 0.35rem 0;
+}
+
+
+.site-footer a {
+    color: var(--white);
+}
+
+
+.site-footer a:hover {
+    text-decoration-thickness: 2px;
+}
+
+
+/* Social Media */
+
+.social-links {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+}
+
+
+.social-links a {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+}
+
+
+.social-links img {
+    display: block;
+
+    width: 44px;
+    height: 44px;
+}
+
+
+/* Project Information */
+
+.footer-project {
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   DESKTOP FOOTER
+   ============================== */
+
+@media (min-width: 700px) {
+
+    .footer-content {
+        grid-template-columns:
+            1fr auto 1fr;
+
+        align-items: center;
+    }
+
+
+    .social-links {
+        justify-content: center;
+    }
+
+
+    .footer-project {
+        text-align: right;
+    }
+
+}
+
+
+/* ==============================
+   TABLET
+   700px and above
+   ============================== */
+
+@media (min-width: 700px) {
+
+    /* Hide hamburger */
+
+    .menu-button {
+        display: none;
+    }
+
+
+    /* Show navigation horizontally */
+
+    .site-nav {
+        display: block;
+
+        margin-left: auto;
+
+        background-color: transparent;
+    }
+
+
+    .site-nav ul {
+        display: flex;
+
+        padding: 0;
+    }
+
+
+    .header-inner {
+        justify-content: flex-start;
+    }
+
+
+    /* Home page cards */
+
+    .three-up {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    /* Activities */
+
+    .activity-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .filter-group {
+        width: auto;
+
+        min-width: 210px;
+    }
+
+}
+
+
+/* ==============================
+   DESKTOP
+   1000px and above
+   ============================== */
+
+@media (min-width: 1000px) {
+
+    .activity-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}

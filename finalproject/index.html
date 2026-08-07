@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Lolilaine Curro-Villegas">
+    <meta name="description" content="Weekend Simple helps users find affordable weekend activities,
+    save favorites, and build a simple personal plan.">
+
+    <meta property="og:title" content="Weekend Simple | Home">
+    <meta property="og:description" content="Find affordable weekend activities and create a simple plan.">
+    <meta property="og:type" content="website">
+
+    <title>Weekend Simple | Home</title>
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/tray.css">
+        
+        <!-- JS -->
+        <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/date.js" defer></script>
+        <script src="scripts/course.js" defer></script>
+
+    <link rel="icon" href="images/favicon.ico" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a class="brand" href="index.html">
+                Weekend Simple
+            </a>
+
+            <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+                Menu
+            </button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="activities.html">Activities</a>
+                    </li>
+
+                    <li>
+                        <a href="plan.html">Plan</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main id="main-content">
+
+        <section class="hero">
+
+            <h1>
+                Plan a simple weekend without overspending
+            </h1>
+
+            <p>
+                Weekend Simple is a lightweight activity planner
+                that helps users browse affordable ideas,
+                save favorites, and submit a simple weekend plan.
+            </p>
+
+            <div class="actions">
+
+                <a class="button" href="activities.html">
+                    Browse Activities
+                </a>
+
+                <a class="button secondary" href="plan.html">
+                    Build a Plan
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="grid three-up" aria-label="Site features">
+
+            <article class="card">
+
+                <h2>15 Activity Ideas</h2>
+
+                <p>
+                    Browse dynamic activity data loaded from
+                    a local JSON file using the Fetch API.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h2>Save Favorites</h2>
+
+                <p>
+                    Store selected activities and your planner
+                    information using local storage.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h2>Responsive Design</h2>
+
+                <p>
+                    Use the website comfortably from a 320px
+                    mobile screen through larger desktop views.
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <!-- Website Information -->
+        <div class="footer-contact">
+
+            <h2>Weekend Simple</h2>
+
+            <p>
+                Simple and affordable ideas for your weekend.
+            </p>
+
+            <p>
+                Browse activities, save favorites,
+                and create your weekend plan.
+            </p>
+
+            <p>
+                <a href="attributions.html">
+                    Attributions
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- Social Media Links -->
+        <nav class="social-links" aria-label="Social media links">
+
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit YouTube">
+                <img src="images/youtube.png" alt="" width="44" height="44" loading="lazy">
+            </a>
+
+
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram">
+                <img src="images/instagram.png" alt="" width="44" height="44" loading="lazy">
+            </a>
+
+
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Facebook">
+                <img src="images/facebook.png" alt="" width="44" height="44" loading="lazy">
+            </a>
+
+
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit TikTok">
+                <img src="images/tiktok.png" alt="" width="44" height="44" loading="lazy">
+            </a>
+
+        </nav>
+
+
+        <!-- Project Information -->
+        <div class="footer-project">
+
+            <p>
+                &copy;
+                <span id="year"></span>
+                Weekend Simple
+            </p>
+
+            <p>
+                Aine Curro-Villegas
+            </p>
+
+            <p>
+                WDD 231 Final Project
+            </p>
+
+            <p>
+                <a href="attributions.html">
+                    Attributions
+                </a>
+            </p>
+
+            <p>
+                <a href="REPLACE-WITH-YOUR-PUBLIC-VIDEO-URL" target="_blank" rel="noopener noreferrer">
+                    Project Demonstration Video
+                </a>
+            </p>
+
+            <p id="lastModified"></p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
