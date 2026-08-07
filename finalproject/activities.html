@@ -3,41 +3,54 @@
 
 <head>
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="author" content="Lolilaine Curro-Villegas">
-    <meta name="description" content="Weekend Simple helps users find affordable weekend activities,
-    save favorites, and build a simple personal plan.">
 
+    <meta name="description"
+        content="Weekend Simple helps users find affordable weekend activities, save favorites, and build a simple personal plan.">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Weekend Simple | Activities">
-    <meta property="og:description" content="Find affordable weekend activities and create a simple plan.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ainevillegas.github.io/wdd231/finalproject/activities.html">
-    <meta property="og:image" content="https://ainevillegas.github.io/wdd231/finalproject/images/tray.png">
 
->
+    <meta property="og:description" content="Find affordable weekend activities and create a simple plan.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://ainevillegas.github.io/wdd231/finalproject/activities.html">
+
+    <meta property="og:image" content="https://ainevillegas.github.io/wdd231/finalproject/images/tray.png">
 
     <title>Weekend Simple | Activities</title>
 
-    <!-- GOOGLE FONTS -->
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
+
     <link rel="stylesheet" href="styles/small.css">
+
     <link rel="stylesheet" href="styles/tray.css">
 
-    <!-- JS -->
+    <!-- Shared JavaScript -->
     <script src="scripts/navigation.js" defer></script>
+
     <script src="scripts/date.js" defer></script>
 
-
-    <link rel="icon" href="images/favicon.ico" type="image/svg+xml">
-    <link rel="stylesheet" href="css/styles.css">
-
     <script type="module" src="scripts/main.js"></script>
+
+    <!-- IMPORTANT: Activity JavaScript -->
+    <script type="module" src="scripts/activities.js"></script>
+
 </head>
 
 
@@ -99,8 +112,7 @@
 
         <p>
             Filter the full set of weekend ideas,
-            open the detail dialog, and save
-            favorites for later.
+            open the detail dialog, and save favorites for later.
         </p>
 
 
@@ -150,19 +162,20 @@
         </p>
 
 
-        <!-- JavaScript inserts the 15 activities here -->
+        <!-- JavaScript inserts activities here -->
 
         <section id="activity-list" class="grid activity-grid" aria-label="Weekend activities">
         </section>
 
 
-        <!-- Accessible Modal Dialog -->
+        <!-- Modal -->
 
         <dialog id="activity-dialog" aria-labelledby="dialog-title">
 
             <h2 id="dialog-title">
                 Activity Details
             </h2>
+
 
             <div id="dialog-body">
             </div>
@@ -190,94 +203,96 @@
     </main>
 
 
-<footer class="site-footer">
+    <footer class="site-footer">
 
-    <div class="footer-content">
+        <div class="footer-content">
 
-        <!-- Website Information -->
-        <div class="footer-contact">
 
-            <h2>Weekend Simple</h2>
+            <div class="footer-contact">
 
-            <p>
-                Simple and affordable ideas for your weekend.
-            </p>
+                <h2>
+                    Weekend Simple
+                </h2>
 
-            <p>
-                Browse activities, save favorites,
-                and create your weekend plan.
-            </p>
+                <p>
+                    Simple and affordable ideas for your weekend.
+                </p>
 
-            <p>
-                <a href="attributions.html">
-                    Attributions
+                <p>
+                    Browse activities, save favorites,
+                    and create your weekend plan.
+                </p>
+
+                <p>
+                    <a href="attributions.html">
+                        Attributions
+                    </a>
+                </p>
+
+            </div>
+
+
+            <nav class="social-links" aria-label="Social media links">
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit YouTube">
+                    <img src="images/youtube.png" alt="" width="44" height="44" loading="lazy">
                 </a>
-            </p>
+
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit Instagram">
+                    <img src="images/instagram.png" alt="" width="44" height="44" loading="lazy">
+                </a>
+
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit Facebook">
+                    <img src="images/facebook.png" alt="" width="44" height="44" loading="lazy">
+                </a>
+
+
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit TikTok">
+                    <img src="images/tiktok.png" alt="" width="44" height="44" loading="lazy">
+                </a>
+
+            </nav>
+
+
+            <div class="footer-project">
+
+                <p>
+                    &copy;
+                    <span id="year"></span>
+                    Weekend Simple
+                </p>
+
+                <p>
+                    Aine Curro-Villegas
+                </p>
+
+                <p>
+                    WDD 231 Final Project
+                </p>
+
+                <p>
+                    <a href="attributions.html">
+                        Attributions
+                    </a>
+                </p>
+
+                <p>
+                    <a href="https://youtu.be/kv-EJvXTQJE" target="_blank" rel="noopener noreferrer">
+                        Project Demonstration Video
+                    </a>
+                </p>
+
+                <p id="lastModified"></p>
+
+            </div>
 
         </div>
 
-
-        <!-- Social Media Links -->
-        <nav class="social-links" aria-label="Social media links">
-
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit YouTube">
-                <img src="images/youtube.png" alt="" width="44" height="44" loading="lazy">
-            </a>
-
-
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram">
-                <img src="images/instagram.png" alt="" width="44" height="44" loading="lazy">
-            </a>
-
-
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Facebook">
-                <img src="images/facebook.png" alt="" width="44" height="44" loading="lazy">
-            </a>
-
-
-            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit TikTok">
-                <img src="images/tiktok.png" alt="" width="44" height="44" loading="lazy">
-            </a>
-
-        </nav>
-
-
-        <!-- Project Information -->
-        <div class="footer-project">
-
-            <p>
-                &copy;
-                <span id="year"></span>
-                Weekend Simple
-            </p>
-
-            <p>
-                Aine Curro-Villegas
-            </p>
-
-            <p>
-                WDD 231 Final Project
-            </p>
-
-            <p>
-                <a href="attributions.html">
-                    Attributions
-                </a>
-            </p>
-
-            <p>
-                <a href="https://youtu.be/kv-EJvXTQJE" target="_blank" rel="noopener noreferrer">
-                    Project Demonstration Video
-                </a>
-            </p>
-
-            <p id="lastModified"></p>
-
-        </div>
-
-    </div>
-
-</footer>
+    </footer>
 
 </body>
 

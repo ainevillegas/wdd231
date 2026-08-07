@@ -28,9 +28,9 @@ let activities = [];
 let selectedActivity = null;
 
 
-/*
-  LOCAL STORAGE
-*/
+/* =========================
+   LOCAL STORAGE
+   ========================= */
 
 function getFavorites() {
 
@@ -39,7 +39,11 @@ function getFavorites() {
 
 
     if (storedFavorites) {
-        return JSON.parse(storedFavorites);
+
+        return JSON.parse(
+            storedFavorites
+        );
+
     }
 
 
@@ -62,117 +66,126 @@ function saveFavorite(activityId) {
             "weekendFavorites",
             JSON.stringify(favorites)
         );
+
     }
+
 }
 
 
-/*
-  CREATE ACTIVITY CARD
-*/
+/* =========================
+   CREATE CARD
+   ========================= */
 
 function createCard(activity) {
 
     return `
-    <article class="card">
+        <article class="card">
 
-      <h2>
-        ${activity.name}
-      </h2>
+            <h2>
+                ${activity.name}
+            </h2>
 
+            <ul class="card-meta">
 
-      <ul class="card-meta">
+                <li>
+                    <strong>Category:</strong>
+                    ${activity.category}
+                </li>
 
-        <li>
-          <strong>Category:</strong>
-          ${activity.category}
-        </li>
+                <li>
+                    <strong>Duration:</strong>
+                    ${activity.duration}
+                </li>
 
-        <li>
-          <strong>Duration:</strong>
-          ${activity.duration}
-        </li>
+                <li>
+                    <strong>Budget:</strong>
+                    ${activity.budget}
+                </li>
 
-        <li>
-          <strong>Budget:</strong>
-          ${activity.budget}
-        </li>
+                <li>
+                    <strong>ID:</strong>
+                    ${activity.id}
+                </li>
 
-        <li>
-          <strong>ID:</strong>
-          ${activity.id}
-        </li>
+            </ul>
 
-      </ul>
+            <p>
+                ${activity.description}
+            </p>
 
+            <button
+                type="button"
+                data-details="${activity.id}"
+            >
+                View Details
+            </button>
 
-      <p>
-        ${activity.description}
-      </p>
+        </article>
+    `;
 
-
-      <button
-        type="button"
-        data-details="${activity.id}"
-      >
-        View Details
-      </button>
-
-    </article>
-  `;
 }
 
 
-/*
-  DISPLAY ACTIVITIES
-*/
+/* =========================
+   RENDER ACTIVITIES
+   ========================= */
 
 function renderActivities(items) {
 
     container.innerHTML =
-        items.map(createCard).join("");
+        items
+            .map(createCard)
+            .join("");
 
 
     status.textContent =
         `${items.length} activities displayed.`;
 
 
-    /*
-      ADD EVENT LISTENERS
-      TO DYNAMIC BUTTONS
-    */
-
-    document
-        .querySelectorAll("[data-details]")
-        .forEach((button) => {
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    const id =
-                        Number(button.dataset.details);
+    const detailButtons =
+        document.querySelectorAll(
+            "[data-details]"
+        );
 
 
-                    selectedActivity =
-                        activities.find(
-                            (activity) =>
-                                activity.id === id
-                        );
+    detailButtons.forEach((button) => {
 
+        button.addEventListener(
+            "click",
+            () => {
+
+                const id =
+                    Number(
+                        button.dataset.details
+                    );
+
+
+                selectedActivity =
+                    activities.find(
+                        (activity) =>
+                            activity.id === id
+                    );
+
+
+                if (selectedActivity) {
 
                     openActivityDialog(
                         selectedActivity
                     );
-                }
-            );
 
-        });
+                }
+
+            }
+        );
+
+    });
+
 }
 
 
-/*
-  MODAL DIALOG
-*/
+/* =========================
+   MODAL
+   ========================= */
 
 function openActivityDialog(activity) {
 
@@ -182,35 +195,36 @@ function openActivityDialog(activity) {
 
     dialogBody.innerHTML = `
 
-    <p>
-      ${activity.description}
-    </p>
+        <p>
+            ${activity.description}
+        </p>
 
-    <p>
-      <strong>Category:</strong>
-      ${activity.category}
-    </p>
+        <p>
+            <strong>Category:</strong>
+            ${activity.category}
+        </p>
 
-    <p>
-      <strong>Duration:</strong>
-      ${activity.duration}
-    </p>
+        <p>
+            <strong>Duration:</strong>
+            ${activity.duration}
+        </p>
 
-    <p>
-      <strong>Budget:</strong>
-      ${activity.budget}
-    </p>
+        <p>
+            <strong>Budget:</strong>
+            ${activity.budget}
+        </p>
 
-  `;
+    `;
 
 
     dialog.showModal();
+
 }
 
 
-/*
-  FILTER ACTIVITIES
-*/
+/* =========================
+   FILTER
+   ========================= */
 
 categoryFilter.addEventListener(
     "change",
@@ -227,6 +241,7 @@ categoryFilter.addEventListener(
             );
 
             return;
+
         }
 
 
@@ -241,20 +256,23 @@ categoryFilter.addEventListener(
         renderActivities(
             filteredActivities
         );
+
     }
 );
 
 
-/*
-  SAVE FAVORITE
-*/
+/* =========================
+   SAVE FAVORITE
+   ========================= */
 
 favoriteButton.addEventListener(
     "click",
     () => {
 
         if (!selectedActivity) {
+
             return;
+
         }
 
 
@@ -276,13 +294,14 @@ favoriteButton.addEventListener(
             },
             1200
         );
+
     }
 );
 
 
-/*
-  LOAD DATA
-*/
+/* =========================
+   LOAD DATA
+   ========================= */
 
 async function initialize() {
 
@@ -292,26 +311,40 @@ async function initialize() {
             await fetchActivities();
 
 
+        if (!Array.isArray(activities)) {
+
+            throw new Error(
+                "Activity data is not an array."
+            );
+
+        }
+
+
         renderActivities(
             activities
         );
 
     } catch (error) {
 
+        console.error(
+            "Activity loading error:",
+            error
+        );
+
+
         container.innerHTML = `
-      <p>
-        Activity data could not be loaded.
-        Please try again later.
-      </p>
-    `;
+            <p>
+                Activity data could not be loaded.
+                Please try again later.
+            </p>
+        `;
 
 
         status.textContent =
             "Data loading error.";
 
-
-        console.error(error);
     }
+
 }
 
 
